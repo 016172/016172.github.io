@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color:#C60;
+	
+}
+
+#backgrundsbild{
+
+	background-image:url(SvenskaFlaggan5.jpg);
+	height:1017px;
+	width:1885px;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border-radius:20px;
+	
+	}
+#backgrundsbild2{
+	background-image:url(USATHIS.jpg);
+	height:1017px;
+	width:1885px;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border-radius:20px;
+}
+#backgrundsbild3{
+	background-image:url(photoTHIS.jpg);
+	height:1017px;
+	width:1885px;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border-radius:20px;
+}
+#storbox{
+	background-color:#06F;
+	width:1200px;
+	height:1000px;
+	margin-left:350px;
+}
+
+header{
+	background-color:#CC3;
+	width:1200px;
+	height:100px;
+	text-align:center;
+	text-shadow: 6px 5px 8px #000;
+}
+nav{
+	font-size:15px;
+	text-align:center;
+	background-color:#F90;
+	
+
+}
+
+aside{
+	background-color:#666;
+	width:200px;
+	height:900px;
+	font-size:30px;
+	float:left;
+}
+
+article{
+	background-color:#63F;
+	width:1000px;
+	height:900px;
+	float:left;
+}
+
+.meny{
+	background-color:#0CC;
+	text-align:center;
+	font-size:25px;
+	width:100%;
+	height:70px;
+	margin-top:-25px;
+}
+
+
+.sida1{
+  background-color:#6FF;
+	width:200px;
+	height:50px;
+	text-align:center;
+	margin-top:80px;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border-radius:20px;
+	
+}
+
+.sida2{
+	background-color:#6FF;
+	width:200px;
+	height:50px;
+	margin-top:140px;
+	text-align:center;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border-radius:20px;
+	
+}
+
+.sida3{
+	background-color:#6FF;
+	width:200px;
+	height:50px;
+	margin-top:180px;
+	text-align:center;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border-radius:20px;
+	
+}
+
+a:hover{
+	background-color:#6F0;
+}
+
+
+
+
+
