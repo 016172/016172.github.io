@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Namnlöst dokument</title>
+</head>
+
+<body>
+		
+     <p>Skriv in ett nummer genom att trycka på knappen:</p>
+       <p><i id='Nummret'></i></p>
+        <input type='button' onclick='Bytnummer()' value='Byt nummer'/>
+        
+        <script type="text/javascript">
+		function Bytnummer() {
+			
+	    var minText=prompt("Skriv in ett nummer:");
+		document.getElementById('Nummret').innerHTML = minText;	
+		}
+		
+		</script>
+</body>
+</html>

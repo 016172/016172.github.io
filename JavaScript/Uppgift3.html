@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Namnlöst dokument</title>
+</head>
+
+<body>
+<p>Skriv in ett <id="p1">nummer genom att trycka på knappen nedan:</p>
+       <p><i id='Nummret'></i></p>
+        <input type='button' onclick='Bytnummer()' value='Byt nummer'/>
+        
+        <script type="text/javascript">
+		function Bytnummer() {
+		do {
+			
+		var minText=prompt("Skriv in ett nummer:");
+		
+		var Nummer = parseInt(minText)
+		
+		if (Nummer + 2 == Nummer + 2)
+		{
+   		 document.getElementById('Nummret').innerHTML = minText;
+		}
+		}while (Nummer + 2 != Nummer + 2)}
+		
+			
+			
+</script>
+</body>
+</html>
