@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin:0px;
+}
+
+#bilden{
+	background-image:url(../Slutprojekt/sida1PRETHIS.jpg);
+	height:974px;
+	width:1920px;
+}
+
+#bakgrundsbild1{
+	background-image:url(../Slutprojekt/HemsidaPRETHIS.jpg);
+	height:974px;
+	width:1920px;
+	
+}
+
+
+
+
