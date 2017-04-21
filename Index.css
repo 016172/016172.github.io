@@ -1,0 +1,400 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	width:100%;
+	height:100%;
+	margin:0%;
+}
+
+/* Clearing floats */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+    
+}
+
+/* Mini reset, no margins, paddings or bullets */
+.menu,
+.submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+    
+}
+
+.menu,
+.submenu1 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+    
+}
+
+.menu,
+.submenu2 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+    
+}
+
+/* Main level */
+.menu {			
+  margin: 50px auto;
+  width: 800px;
+  /* http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value */
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  margin-top:-75px;
+  margin-left:560px;
+}
+
+.menu > li {
+  background: #34495e;
+  float: left;
+  position: relative;
+  transform: skewX(25deg);
+}
+
+.menu a {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Arial, Helvetica;
+  font-size: 14px;
+}		
+
+.menu li:hover {
+  background: #e74c3c;
+}		
+
+.menu > li > a {
+  transform: skewX(-25deg);
+  padding: 1em 2em;
+}
+
+
+/* Dropdown */
+.submenu {
+  position: absolute;
+  width: 200px;
+  left: 50%; margin-left: -100px;
+  transform: skewX(-25deg);
+  transform-origin: left top;
+}
+
+.submenu li {
+  background-color: #34495e;
+  position: relative;
+  overflow: hidden;		
+}						
+
+.submenu > li > a {
+  padding: 1em 2em;			
+}
+
+.submenu > li::after {
+  content: '';
+  position: absolute;
+  top: -125%;
+  height: 100%;
+  width: 100%;			
+  box-shadow: 0 0 50px rgba(0, 0, 0, .9);			
+}		
+
+/* Dropdown 2*/
+
+.submenu1 {
+  position: absolute;
+  width: 200px;
+  left: 50%; margin-left: -100px;
+  transform: skewX(-25deg);
+  transform-origin: left top;
+}
+
+.submenu1 li {
+  background-color: #34495e;
+  position: relative;
+  overflow: hidden;		
+}						
+
+.submenu1 > li > a {
+  padding: 1em 2em;			
+}
+
+.submenu1 > li::after {
+  content: '';
+  position: absolute;
+  top: -125%;
+  height: 100%;
+  width: 100%;			
+  box-shadow: 0 0 50px rgba(0, 0, 0, .9);			
+}	
+
+/* Dropdown 3 */
+
+.submenu2 {
+  position: absolute;
+  width: 200px;
+  left: 50%; margin-left: -100px;
+  transform: skewX(-25deg);
+  transform-origin: left top;
+}
+
+.submenu2 li {
+  background-color: #34495e;
+  position: relative;
+  overflow: hidden;		
+}						
+
+.submenu2 > li > a {
+  padding: 1em 2em;			
+}
+
+.submenu2 > li::after {
+  content: '';
+  position: absolute;
+  top: -125%;
+  height: 100%;
+  width: 100%;			
+  box-shadow: 0 0 50px rgba(0, 0, 0, .9);			
+}	
+
+/* Odd stuff 3 */
+
+.submenu2 > li:nth-child(odd){
+  transform: skewX(-25deg) translateX(0);
+}
+
+.submenu2 > li:nth-child(odd) > a {
+  transform: skewX(25deg);
+}
+
+.submenu2 > li:nth-child(odd)::after {
+  right: -50%;
+  transform: skewX(-25deg) rotate(3deg);
+}				
+
+/* Even stuff */
+.submenu2 > li:nth-child(even){
+  transform: skewX(25deg) translateX(0);
+}
+
+.submenu2 > li:nth-child(even) > a {
+  transform: skewX(-25deg);
+}
+
+.submenu2 > li:nth-child(even)::after {
+  left: -50%;
+  transform: skewX(25deg) rotate(3deg);
+}
+	
+
+
+/* Odd stuff */
+.submenu > li:nth-child(odd){
+  transform: skewX(-25deg) translateX(0);
+}
+
+.submenu > li:nth-child(odd) > a {
+  transform: skewX(25deg);
+}
+
+.submenu > li:nth-child(odd)::after {
+  right: -50%;
+  transform: skewX(-25deg) rotate(3deg);
+}				
+
+/* Even stuff */
+.submenu > li:nth-child(even){
+  transform: skewX(25deg) translateX(0);
+}
+
+.submenu > li:nth-child(even) > a {
+  transform: skewX(-25deg);
+}
+
+.submenu > li:nth-child(even)::after {
+  left: -50%;
+  transform: skewX(25deg) rotate(3deg);
+}
+
+/* odd stuff 2 */
+
+.submenu1 > li:nth-child(odd){
+  transform: skewX(-25deg) translateX(0);
+}
+
+.submenu1 > li:nth-child(odd) > a {
+  transform: skewX(25deg);
+}
+
+.submenu1 > li:nth-child(odd)::after {
+  right: -50%;
+  transform: skewX(-25deg) rotate(3deg);
+}				
+
+/* Even stuff */
+.submenu1 > li:nth-child(even){
+  transform: skewX(25deg) translateX(0);
+}
+
+.submenu1 > li:nth-child(even) > a {
+  transform: skewX(-25deg);
+}
+
+.submenu1 > li:nth-child(even)::after {
+  left: -50%;
+  transform: skewX(25deg) rotate(3deg);
+}
+
+
+/* Show dropdown */
+.submenu,
+.submenu li {
+  opacity: 0;
+  visibility: hidden;			
+}
+
+.submenu li {
+  transition: .2s ease transform;
+}
+
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li {
+  opacity: 1;
+  visibility: visible;
+}		
+
+.menu > li:hover .submenu li:nth-child(even){
+  transform: skewX(25deg) translateX(15px);			
+}
+
+.menu > li:hover .submenu li:nth-child(odd){
+  transform: skewX(-25deg) translateX(-15px);			
+}
+
+/* Show dropdown 2 */
+
+.submenu1,
+.submenu1 li {
+  opacity: 0;
+  visibility: hidden;			
+}
+
+.submenu1 li {
+  transition: .2s ease transform;
+}
+
+.menu > li:hover .submenu1,
+.menu > li:hover .submenu1 li {
+  opacity: 1;
+  visibility: visible;
+}		
+
+.menu > li:hover .submenu1 li:nth-child(even){
+  transform: skewX(25deg) translateX(15px);			
+}
+
+.menu > li:hover .submenu1 li:nth-child(odd){
+  transform: skewX(-25deg) translateX(-15px);			
+}
+
+/* Show dropdown 3 */
+
+.submenu2,
+.submenu2 li {
+  opacity: 0;
+  visibility: hidden;			
+}
+
+.submenu2 li {
+  transition: .2s ease transform;
+}
+
+.menu > li:hover .submenu2,
+.menu > li:hover .submenu2 li {
+  opacity: 1;
+  visibility: visible;
+}		
+
+.menu > li:hover .submenu2 li:nth-child(even){
+  transform: skewX(25deg) translateX(15px);			
+}
+
+.menu > li:hover .submenu2 li:nth-child(odd){
+  transform: skewX(-25deg) translateX(-15px);			
+}
+
+#Storbox{
+	width:100%;
+	height:100%;
+	position:absolute;
+	background-image:url(patriots-touchdown.gif);
+	background-size:100% 100%;	
+	
+}
+header{
+	width:100%;
+	height:30%;
+}
+.Huvudmeny img{
+	width:100%;
+	height:100px;
+}
+
+.PatriotsFramförGIF img{
+	width:48%;
+	height:50%;
+	position:absolute;
+	margin-left:500px;
+	margin-top:-160px;
+}
+
+
+	
+.HeaderNFL img{
+	width:7%;
+	height:10%;
+	position:absolute;
+	margin-left:1700px;
+	margin-top:-103px;
+	font-size:30px;
+}
+
+.HeaderPATRIOTS img{
+	width:10%;
+	height:8,5%;
+	position:absolute;
+	margin-left:20px;
+	margin-top:-100px;
+	font-size:10px;
+}
+
+
+
+@media (max-width: 1450px) {
+    .menu { display: none; }
+}
+
+
+
+
+
+
+
+
+
+
