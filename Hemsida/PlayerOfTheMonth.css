@@ -2,8 +2,9 @@
 /* CSS Document */
 
 body{
-	
-	margin:0;
+	width:100%;
+	height:100%;
+	margin:0%;
 	
 
 }
@@ -24,12 +25,17 @@ body{
     
 }
 
+/*!
+OBS: här börjar all kod som hänger ihop med dropdowns i både huvudmeny men också "figurerna"
+*/
+
 /* Mini reset, no margins, paddings or bullets */
 .menu,
 .submenu {
   margin: 0;
   padding: 0;
   list-style: none;
+  
     
 }
 
@@ -57,8 +63,10 @@ body{
   width: -moz-fit-content;
   width: -webkit-fit-content;
   width: fit-content;
-  margin-top:-14%;
-  margin-left:560px;
+  margin-top:-75px;
+  margin-left:530px;
+  z-index:999;
+  
 }
 
 .menu > li {
@@ -66,6 +74,7 @@ body{
   float: left;
   position: relative;
   transform: skewX(25deg);
+z-index:999;
 }
 
 .menu a {
@@ -75,6 +84,7 @@ body{
   text-decoration: none;
   font-family: Arial, Helvetica;
   font-size: 14px;
+ 
 }		
 
 .menu li:hover {
@@ -84,26 +94,32 @@ body{
 .menu > li > a {
   transform: skewX(-25deg);
   padding: 1em 2em;
+  
 }
 
 
 /* Dropdown */
 .submenu {
   position: absolute;
+ 
   width: 200px;
   left: 50%; margin-left: -100px;
   transform: skewX(-25deg);
   transform-origin: left top;
+
 }
 
 .submenu li {
   background-color: #34495e;
   position: relative;
-  overflow: hidden;		
+  overflow: hidden;	
+  
+	
 }						
 
 .submenu > li > a {
-  padding: 1em 2em;			
+  padding: 1em 2em;	
+  		
 }
 
 .submenu > li::after {
@@ -266,7 +282,9 @@ body{
 .submenu,
 .submenu li {
   opacity: 0;
-  visibility: hidden;			
+  visibility: hidden;	
+  
+  		
 }
 
 .submenu li {
@@ -338,64 +356,205 @@ body{
 .menu > li:hover .submenu2 li:nth-child(odd){
   transform: skewX(-25deg) translateX(-15px);			
 }
+/*!
+OBS: Här slutar all kod som hänger ihop med dropdowns i både huvudmeny men också "figurerna"
+*/
+
+/*!
+Bakgrunden
+*/
 
 #Storbox{
 	width:100%;
 	height:100%;
-	position:absolute;
-	background-image:url(patriots-touchdown.gif);
+	background-image:url(gty_633957940_88578222.jpg);
 	background-size:100% 100%;
-			
-	
+	z-index:-1;	
 }
-
-
+/*!
+Huvudmeny
+*/
 header{
 	width:100%;
 	height:30%;
 }
-.Huvudmeny {
-	width:100%;
-	height:100%;
-}
-
 .Huvudmeny img{
 	width:100%;
-	height:35%;
-	
+	height:100px;
 }
 
-
-.PatriotsFramförGIF img{
-	width:48%;
-	height:50%;
-	position:absolute;
-	margin-left:29%;
-	margin-top:-18.2%;
-	float:none;
-}
-
-
-	
 .HeaderNFL img{
 	width:7%;
-	height:10%;
+	height:2.95%;
 	position:absolute;
-	margin-left:85%;
-	margin-top:-15.3%;
-	z-index:10;
-	
-	
+	margin-left:90%;
+	margin-top:-103px;
 }
 
 .HeaderPATRIOTS img{
 	width:10%;
 	height:8,5%;
 	position:absolute;
-	margin-left:5%;
-	margin-top:-15%;
-	z-index:10;
+	margin-left:20px;
+	margin-top:-100px;
+	font-size:10px;
+}
+/*!
+Bakgrunden, text, tom brady, stats ligger här i
+*/
+article{
+	width:100%;
+	height:100%;
+}
+
+/*!
+* Simple CSS3 Image Slideshow
+* http://siamonh.com
+*/
+
+/*!
+Bildspel
+*/
+.contant{
+	max-width: 960px;
+	/*margin-top:-58.78%;*/
+	margin-left:25%; /* Styr positioneringen i sidled */
+	position: relative;
+	padding: 1% 0;
+	overflow: hidden;
+	z-index:1;
+	margin-top:-2.6%;
+}h1{
+  text-align: center; 
+  font-size:27px;
+  margin-top:-0.33%;
+  color: #C80815;
+  
+}
+
+h3{
+  text-align: center; 
+  font-size:40px;
+  margin-top:-0.33%;
+  color:#0D254C;
+  
+  
+}
+
+h2{
+  text-align: center; 
+  font-size:40px;
+  margin-top:-0.33%;
+  color:#699;
+  }
+
+
+.intro{
+	position: relative;
+	width: 1000%; /* Styr bredden av bildspelet */ 
+	height: 600px; /* Styr höjden av bildspelet */
+	margin-top:8px;
+	overflow: hidden;
+	background: #f0f0f0;
+	 -webkit-animation: slide 25s infinite alternate ease;
+	        animation: slide 25s infinite alternate ease;
+			z-index:2;
+			
+}.img-contant{
+	float:left;
+	width: 960px; /* styr storleken på bilden i bredden */
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index:-3;
 	
+	
+	
+	/*!
+Bild 1
+*/
+}#photo-1{
+	background-image:url(spelare.jpg);
+
+}
+/*!
+Bild 2
+*/
+#photo-2 {
+  background-image:url(Spelare2.jpg);
+}
+/*!
+Bild 3
+*/
+#photo-3{
+	background-image:url(PlayerOfTheMonth/Tom.jpg);
+}
+/*!
+Bild 4
+*/
+#photo-4{
+	background-image:url(gty_633957940_88578222.jpg);
+}
+
+/*!
+Bakgrundsbild, Tom Brady, Stats, information i text
+*/
+.Background{
+	height:100%;
+	width:50%;
+	margin-left:25%;
+	background-image:url(Denna.Patriots-Banner.jpg);
+	background-size: 100% 100%;
+	margin-top:-1%;
+}
+/*!
+Porträtt
+*/
+.TomBradyPicture {
+	height:100%;
+	width:40%;
+	float:right;
+}
+
+.TomBradyPicture img {
+	height:100%;
+	width:100%;
+	float:right;
+}
+/*!
+h5
+*/
+h5{
+	margin:0.5%;
+}
+/*!
+Stats
+*/
+.Stats{
+	width:100%;
+	height:13%;
+	margin-left:60%;
+	background-color:#D6D6D6;
+	float:right;
+}
+/*!
+Text
+*/
+p{
+	color:#FFF;
+}
+/*!
+Video
+*/
+video {
+  width: 65%;
+  height:auto;
+  margin-top:10%;
+  margin-left:19%;
 }
 
 *{
@@ -548,6 +707,27 @@ transition: all 0.4s ease 0s;
 
 
 
+.right{
+	float:right;
+}
+
+/*!
+Mobilanpassning
+*/
+@-webkit-keyframes slide {
+    0%   {margin-left: 0px;}
+    25%  {margin-left: -960px;}
+    50%  {margin-left: -1920px;}
+    75%  {margin-left: -2880px;}
+    100% {margin-left: 0px;}
+}
+@keyframes slide {
+    0%   {margin-left: 0px;}
+    25%  {margin-left: -960px;}
+    50%  {margin-left: -1920px;}
+    75%  {margin-left: -2900px;}
+    100% {margin-left: 0px;}
+}
 	
 @media screen and (max-width:1920px){
 	#Storbox{
@@ -555,10 +735,10 @@ transition: all 0.4s ease 0s;
 	margin-right:auto;
 	margin-top:auto;
 	width:1920px;
-	}
-	.HeaderNFL {margin-top:0.5%;}
-	.PatriotsFramförGIF{margin-top:0.8%;}
-	.HeaderPATRIOTS{ margin-top:-0.5%;}
+	height:100%;	}
+
+	
+	
 }
 
 @media screen and (max-width:1800px){
@@ -568,10 +748,9 @@ transition: all 0.4s ease 0s;
 	margin-top:auto;
 	width:1800px;
 	}
+	.contant{ margin-left:24% }
 	
-	.HeaderNFL {margin-top:-0.05%;}
-	.PatriotsFramförGIF{margin-top:0.35%;}
-	.HeaderPATRIOTS{ margin-top:-0.4%;}
+	
 }
 
 @media screen and (max-width:1700px){
@@ -581,11 +760,9 @@ transition: all 0.4s ease 0s;
 	margin-top:auto;
 	width:1700px;
 	}
+	.contant{ margin-left:22% }
 	
-	.HeaderNFL {margin-top:0%;}
-	.PatriotsFramförGIF{margin-top:-0.55%;}
-	.HeaderPATRIOTS{ margin-top:-0.1%;}
-	.menu{margin-left:27%;}
+
 }
 
 
@@ -596,10 +773,7 @@ transition: all 0.4s ease 0s;
 	margin-top:auto;
 	width:1600px;
 	}
-	.HeaderNFL {margin-top:0.3%;}
-	.PatriotsFramförGIF{margin-top:-1.8%;}
-	.HeaderPATRIOTS{ margin-top:0.5%;}
-	.menu{margin-top:-15.7%;}
+	.contant{ margin-left:21% }
 }
 
 
@@ -610,10 +784,9 @@ transition: all 0.4s ease 0s;
 	margin-top:auto;
 	width:1500px;
 	}
-	.HeaderNFL {margin-top:0.5%;}
-	.PatriotsFramförGIF{margin-top:-3.2%;}
-	.HeaderPATRIOTS{ margin-top:-1%;}
-	.mobile-menu{margin-top:-18.2%;}
+	.contant{ margin-left:23% }
+	
+	
 
 	
 }
@@ -625,10 +798,8 @@ transition: all 0.4s ease 0s;
 	margin-top:auto;
 	width:1400px;
 	}
-	.mobile-menu{margin-top:-19.6%;}
-	.HeaderNFL {margin-top:0.5%;}
-	.PatriotsFramförGIF{margin-top:-4.6%;}
-	.HeaderPATRIOTS{ margin-top:1.4%;}
+	.contant{ margin-left:18% }
+	
 	
 }
 @media screen and (max-width:1300px){
@@ -638,28 +809,21 @@ transition: all 0.4s ease 0s;
 	margin-top:auto;
 	width:1300px;
 	}
-	
-	.mobile-menu{margin-top:-21.2%; }
-	.HeaderNFL {margin-top:1%;}
-	.PatriotsFramförGIF{margin-top:-6.4%;}
-	.HeaderPATRIOTS{ margin-top:2.5%;}
-	.HeaderPATRIOTS img{width:10%;}
-	
+	.contant{ margin-left:7% }
+		
 }
 
 
 
-@media screen and (max-width:1100px){
+@media screen and (max-width:1150px){
 	#Storbox{
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:auto;
-	width:1100px;
+	width:1150px;
 	}
-	.mobile-menu{margin-top:-24.8%; }
-	.HeaderNFL {margin-top:1.7%; margin-left:4%;}
-	.PatriotsFramförGIF{margin-top:-10.8%;}
-	.HeaderPATRIOTS{ margin-top:2.5%;}
+	.contant{ margin-left: 3%; }
+	
 }
 
 @media screen and (max-width:1000px){
@@ -669,10 +833,7 @@ transition: all 0.4s ease 0s;
 	margin-top:auto;
 	width:1000px;
 	}
-	.mobile-menu{margin-top:-27.4%; }
-	.HeaderNFL {margin-top:2.2%;}
-	.PatriotsFramförGIF{margin-top:-13.8%;}
-	.HeaderPATRIOTS{ margin-top:5%; margin-left:-4%;}
+	.contant{ margin-left: 2%; }
 }
 
 
@@ -683,11 +844,7 @@ transition: all 0.4s ease 0s;
 	margin-top:auto;
 	width:900px;
 	}
-	.mobile-menu{margin-top:-30.4%; }
-	.HeaderNFL {margin-top:2.6%; margin-left:-1%;}
-	.PatriotsFramförGIF{margin-top:-17.28%;}
-	.HeaderPATRIOTS{ margin-top:5%; margin-left:1%;}
-	.HeaderPATRIOTS img{ width:12%;}
+	.contant{ margin-left: 1%; }
 }
 
 @media screen and (max-width:800px){
@@ -697,10 +854,7 @@ transition: all 0.4s ease 0s;
 	margin-top:auto;
 	width:800px;
 	}
-	.mobile-menu{margin-top:-34.2%; }
-	.HeaderNFL {margin-top:3.4%; margin-left:1%;}
-	.PatriotsFramförGIF{margin-top:-21.7%;}
-	.HeaderPATRIOTS{ margin-top:6.5%; margin-left:-4%; width:5%; height:7%;}
+	.contant{ margin-left:2%;}
 }
 
 @media screen and (max-width:700px){
@@ -711,10 +865,7 @@ transition: all 0.4s ease 0s;
 	width:700px;
 	}
 	
-	.mobile-menu{margin-top:-39%; }
-	.HeaderNFL {margin-top:4.4%; margin-left:-1%;}
-	.PatriotsFramförGIF{margin-top:-27.4%;}
-	.HeaderPATRIOTS{ margin-top:6.5%; margin-left:-4%; width:5%; height:7%;}
+	
 }
 @media screen and (max-width:600px){
 	#Storbox{
@@ -723,10 +874,7 @@ transition: all 0.4s ease 0s;
 	margin-top:auto;
 	width:600px;
 	}
-	.mobile-menu{margin-top:-45.4%; }
-	.HeaderNFL {margin-top:5.75%; margin-left:-1%;}
-	.PatriotsFramförGIF{margin-top:-35%;}
-	.HeaderPATRIOTS{ margin-top:12%; margin-left:-4%;}
+	
 }
 
 @media screen and (max-width:500px){
@@ -736,57 +884,90 @@ transition: all 0.4s ease 0s;
 	margin-top:auto;
 	width:500px;
 	}
-	.mobile-menu{margin-top:-54.9%; }
-	.HeaderNFL {margin-top:7.3%; margin-left:-3%;}
-	.PatriotsFramförGIF{margin-top:-45.5%;}
-	.HeaderPATRIOTS{ margin-top:12%; margin-left:-4%;}
-	.HeaderPATRIOTS img{ width:17%;}
+	
 }
 
-@media screen and (max-width:450px){
+@media screen and (max-width:400px){
 	#Storbox{
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:auto;
-	width:450px;
+	width:400px;
 	}
-	.mobile-menu{margin-top:-61%; }
-	.HeaderNFL {margin-top:8%; margin-left:-8%;}
-	.PatriotsFramförGIF{margin-top:-52.7%;}
-	.HeaderPATRIOTS{ margin-top:15%; margin-left:-4%;}
-	.HeaderPATRIOTS img{ width:20%;}
-
+	
 }
-
 
 /* Menyn försvinner då den lägger sig konstigt */
+
+
 @media screen and (max-width: 1500px){
-
-	.menu { display:none;}
+	.menu{ display:none;}
 	
 	
 }
 
-@media screen and (min-width: 1500px){
-	.mobile-menu{ display:none;}
+@media screen and (min-width:1500px){
+	.mobile-menu{display:none;}
+}
+
+
+@media screen and (max-width: 1920px) and (max-height: 1080px) {
+    .menu { }
+
+	
+}
+/* För skärmar med en upplösning på 1680x1050 (px) */
+@media screen and (max-width: 1680px) and (max-height: 1050px) {
+    .menu { }
+	
+	
+	
+}
+
+/*  För skärmar med en upplösning på 1366x768 (px) */
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+    .menu {  }
+	
+	
+	
+}
+/* För skärmar med en upplösning på 1280x1024 (px) */
+@media only screen and (max-width: 1280px) and (max-height: 1024px) {
+    .menu {}
 	
 }
 
 
-@media screen and (max-width:700px) and (max-height:450px){
-	#Storbox{
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:auto;
-	width:700px;
-	}
+
+@media screen and (max-width: 1921px) and (max-height: 1081px) {
+    .menu {  }
 	
-	.mobile-menu{margin-top:-14%; }
-	.HeaderNFL {margin-top:-0.5%; margin-left:-1%;}
-	.PatriotsFramförGIF{margin-top:3.5%;}
-	.HeaderPATRIOTS{ margin-top:-1.5%; margin-left:-4%; width:5%; height:7%;}
+	
+}
+/* För skärmar med en upplösning på 1680x1050 (px) */
+@media screen and (max-width: 1680px) and (max-height: 1050px) {
+    .menu { }
+	
+	
 }
 
-		
+/*  För skärmar med en upplösning på 1366x768 (px) */
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+    .menu { }
+	
+	
+	
+}
+
+/* Iphone 6 skärm */
+@media screen and (max-width: 375px) and (max-height: 667px) {
+    .mobile-menu {}
+	
+	
+	
+}
+
+
+
 
 
