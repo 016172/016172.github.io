@@ -756,15 +756,15 @@ header{
 }
 }
 
-@media screen and (max-width:376px) and (max-height:668px){
+@media screen and (max-width:375px) and (max-height:667px){
 	#Storbox{
 	
-	width:376px;
+	width:375px;
 	}
 	
 	.menu1{margin-top:-42%; margin-left:-5%;}
 	.HeaderNFL {margin-top:3.5%; margin-left:-1%;}
-	.PatriotsFramförGIF{margin-top:-34%; margin-left:3%;}
+	.PatriotsFramförGIF{margin-top:-36%; margin-left:3%;}
 	.HeaderPATRIOTS{ margin-top:6.5%; margin-left:13%;}
 	.HeaderPATRIOTS img{ width:12%;}
 	.menu-list {
