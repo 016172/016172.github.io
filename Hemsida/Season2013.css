@@ -563,6 +563,7 @@ span {
   width: 100px;
   perspective: 100px;
   position:absolute;
+	 z-index:999;
 }
 
 .hamburger {
