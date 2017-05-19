@@ -1,0 +1,385 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+<link href="Index.css" rel="stylesheet" type="text/css">
+<meta charset="utf-8">
+<title>Patriots TM Season League 2015</title>
+</head>
+<body>
+<div id="Storbox2">
+
+<header>
+    
+   <div class="Huvudmeny2">
+         </div>
+                  
+       		<div class="HeaderNFL1">
+         		 <img src="Super_Bowl_LI_logo.svg.png" alt="En bild">
+            		 </div>
+                     
+                     	<div class="HeaderPATRIOTS1">
+                       	  <img src="patriotsLogo.png" alt="En bild">
+                        	 </div>		
+                             
+                             
+                                     
+                                                        
+                                     
+                                     <ul class="menu cf">
+  <li>
+  <a href="">Player of the month</a>
+   	<ul class="submenu2">
+               <li><a href="PlayerOfTheMonthSeptember.html">September 2016</a></li>
+      <li><a href="PlayerOfTheMonthOctober.html">October 2016</a></li>
+      <li><a href="PlayerOfTheMonthNovember.html">November 2016</a></li>
+      <li><a href="PlayerOfTheMonthDecember.html">December 2016</a></li>
+   	 </ul>			
+  	</li>
+  
+  <li>
+    <a href="HallOfFame.html">Hall Of Fame</a>
+   		  
+   	
+              			
+  	</li>
+    
+    <li>
+  			<a href="">Seasons</a>
+  			<ul class="submenu2">
+      			<li><a href="Season2016.html" >Season 2016</a></li>
+     			 <li><a href="Season2014.html">Season 2014</a></li>
+     			 <li><a href="Season2013.html">Season 2013</a></li>
+      			
+   		   </ul>	
+    </li>
+     
+   		 		
+ 
+ 		 <li><a href="Roster.html">Patriots Roster</a></li>
+  		 <li><a href="Index.html">Homepage</a></li>
+  		 <li>
+  			<a href="">Social Media</a>
+  			<ul class="submenu1">
+      			<li><a href="https://www.facebook.com/newenglandpatriots" >Facebook</a></li>
+     			 <li><a href="https://twitter.com/patriots">Twitter</a></li>
+     			 <li><a href="https://www.instagram.com/patriots">Instagram</a></li>
+      				<li><a href="https://www.youtube.com/channel/UCMm_V8YjmnZRhToXIqDYDuw">Youtube</a></li>
+   		   </ul>	
+    </li>		
+</ul>
+ <!--Meny, inklusive de bilder som ligger i headern, etc-->
+	</header>
+    
+    	    <nav>
+             <!-- Det är okej att ha detta även om valideringen klagar på detta, enligt dig (2017-05-11 15:34)-->
+<input type="checkbox" id="clicker">
+<div class="menu1">
+  <label for="clicker" class="hamburger">
+    <div class="bar" id="bar1">
+    </div>
+    <div class="bar" id="bar2">
+    </div>
+    <div class="bar" id="bar3">
+    </div>
+     <!-- Det är okej att ha detta även om valideringen klagar på detta, enligt dig (2017-05-11 15:34)-->
+    
+    
+  </label>
+  <div class="menu-list">
+    <ul>
+       <li><a id="item2" href="Index.html">Home</a></li>
+      <li><a id="item3" href="Season2016.html">Season 2016</a></li>
+      <li><a id="item6" href="Season2014.html">Season 2014</a></li>
+      <li><a id="item7" href="Season2013.html">Season 2013</a></li>
+      <li><a id="item8" href="PlayerOfTheMonthSeptember.html">POTM September 2016</a></li>
+      <li><a id="item9" href="PlayerOfTheMonthOctober.html">POTM October 2016</a></li>
+      <li><a id="item10" href="PlayerOfTheMonthNovember.html">POTM November 2016</a></li>
+      <li><a id="item11" href="PlayerOfTheMonthDecember.html">POTM December 2016</a></li>
+      <li><a id="item12" href="HallOfFame.html">Hall of Fame</a></li>
+        <li><a id="item13" href="Roster.html">Roster</a></li>
+    </ul>
+  </div>
+</div>
+
+
+</nav>
+<!--Mobilsmeny, eller menyn som kommer fram då upplösningen är mindre än en bestämd pixel-->
+
+         
+        	    <aside>
+            <div id="container">
+       <div id="days"></div>
+       <div id="hours"></div>
+       <div id="minutes"></div>
+       <div id="seconds"></div>
+       <div id="footer"> 
+         Days until 2017 NFL Playoff
+       </div>      
+    </div><!--Klocka-->
+                     <script>
+        /***************************************
+        
+        DECLARE VARIABLES FOR DATE
+        
+        ***************************************/
+        
+        var today = new Date();
+        var debut = new Date('Sep 7, 2017');
+        var difference = debut.getTime() - today.getTime();
+        
+        var totalSeconds = difference / 1000;
+        var days = Math.floor(totalSeconds / 86400);
+        var hours = Math.ceil((totalSeconds % 86400) / 3600);
+        var minutes = Math.floor((totalSeconds % 3600) / 60);
+        var seconds = Math.floor((totalSeconds % 3600) % 60);
+        
+        var daysValue;
+        var hoursValue;
+        var minutesValue;
+        var secondsValue;
+        
+        /***************************************
+        
+        FUNCTION TO PAD NUMBERS
+        
+        ***************************************/
+        
+        function pad2(number) {
+             return (number < 10 ? '0' : '') + number   
+        }
+        
+        /***************************************
+        
+        FUNCTION TO WRITE NUMBERS TO CLOCK
+        
+        ***************************************/
+        
+        function displayTime() {
+            
+            var daysDiv = document.getElementById('days');
+            var daysContent = daysDiv.innerHTML;
+            daysDiv.innerHTML = days;
+            
+            var hoursDiv = document.getElementById('hours');
+            var hoursContent = hoursDiv.innerHTML;
+            hoursDiv.innerHTML = pad2(hours);
+            
+            var minutesDiv = document.getElementById('minutes');
+            var minutesContent = minutesDiv.innerHTML;
+            minutesDiv.innerHTML = pad2(minutes);
+            
+            var secondsDiv = document.getElementById('seconds');
+            var secondsContent = secondsDiv.innerHTML;
+            secondsDiv.innerHTML = pad2(seconds);
+        }
+        
+        displayTime();
+        
+        /***************************************
+        
+        FUNCTION TO COUNTDOWN DAYS
+        
+        ***************************************/
+        
+        function timerDays() {
+            
+            /* Code for this section under construction */
+        }
+        
+        /***************************************
+        
+        FUNCTION TO COUNTDOWN HOURS
+        
+        ***************************************/
+        
+        function timerHours() {
+            hoursValue = setInterval(function(){
+                if (hours < 0) {
+                    hours = hours + 24;
+                    days = days - 1;
+                    displayTime();
+                }
+                else if (hours == 24) {
+                    hours = 0;
+                    displayTime();
+                }
+                else {
+                    hours = hours;
+                    displayTime();
+                }
+            }, 100);
+        }
+        
+        /***************************************
+        
+        FUNCTION TO COUNTDOWN MINUTES
+        
+        ***************************************/
+        
+        function timerMinutes() {
+            minutesValue = setInterval(function(){
+                if (minutes < 0) {
+                    minutes = minutes + 60;
+                    hours = hours - 1;
+                    displayTime();
+                }
+                else {
+                    minutes = minutes;
+                    displayTime();
+                }
+            }, 100);
+        }
+        
+        /***************************************
+        
+        FUNCTION TO COUNTDOWN SECONDS
+        
+        ***************************************/
+        
+        function timerSeconds() {
+            secondsValue = setInterval(function(){
+                if (seconds > 0) {
+                    seconds = seconds - 1;
+                    displayTime();
+                }
+                else if (seconds <= 0) {
+                    seconds = seconds + 59;
+                    minutes = minutes - 1;
+                    displayTime();
+                }
+                else {
+                }
+            }, 1000);
+        }
+        
+        /***************************************
+        
+        CALL ALL COUNTDOWN FUNCTIONS
+        
+        ***************************************/
+        
+        timerSeconds();
+        timerMinutes();
+        timerHours();
+        </script>  <!--Skript som innefattar klockans funktion, etc-->
+    
+    
+            </aside>
+            
+            <article>
+            
+        
+         			   <div class="Background2">
+            
+                            <div class="Schema">
+                            <div class="Schedule">
+                            <p>Schedule</p>
+                            </div>
+                                <img src="season2015.jpg" alt="En bild">
+                                
+                                <div class="Resultat">
+                                <div class="Results">
+                                <p> Results </p>
+                                </div>
+                                
+                                 <img src="2015schema.gif" alt="En bild">
+                                   </div>
+                                          
+                              </div>
+                                
+                                    
+                                    <h5>
+                                   DRAFT PICKS</h5>
+<p>ROUND 1, PICK 32 (32): MALCOM BROWN, DT | TEXAS
+NFL.com Pick Analysis: "This is a great pick for the Patriots. To get Brown at 32 is tremendous. He has an ability to push the pocket. He can be a three-down player, but in New England he'll be in a system in which he plays all over the place." -- Mike Mayock</p> 
+ 
+<p> ROUND 2, PICK 32 (64): JORDAN RICHARDS, DB | STANFORD
+NFL.com Pick Analysis:  "Richards is a very smart safety. This is a bit of a reach for the Patriots; maybe two rounds early." -- Daniel Jeremiah </p>
+<p> ROUND 3, PICK 33 (97): GENEO GRISSOM, DL | OKLAHOMA
+NFL.com Pick Analysis: "He's played all over the place at Oklahoma. He can be an edge rusher and can drop into coverage. He is an athlete, is versatile and smart, and fits New England." -- Mike Mayock</p>
+
+<p> ROUND 4, PICK 2 (101): TREY FLOWERS, DE | ARKANSAS
+NFL.com Pick Analysis: Patriots get good value for Flowers in the 4th round. His staple is power and ability to control the line of scrimmage. Bill Belichick likes to rotate his defensive front and Flowers can make an impact against the run. --Mark Dulgerian </p>
+
+<p>ROUND 4, PICK 12 (111): TRE' JACKSON, G | FLORIDA STATE
+NFL.com Pick Analysis: Jackson is the ideal big body you want in an interior lineman. He'll earn his paycheck primarily as a run block specialist. If he can stay healthy he could compete for a starting spot on a team that has had its share volatility along the offensive line. --Mark Dulgerian</p>
+
+<p> ROUND 4, PICK 32 (131): SHAQ MASON, OL | GEORGIA TECH
+NFL.com Pick Analysis: New England gets a bull of a run blocker in Shaq Mason. He needs some work in pass protection, but his elite power in the run game could earn him early playing time on an offensive line that saw its struggles last year. --Mark Dulgerian</p> 
+
+<p>ROUND 5, PICK 30 (166): JOE CARDONA, LS | NAVY
+NFL.com Pick Analysis:  Extremely accurate and consistent as snapper for punts over last four years and field goals over last three. Snaps have been clocked at 41 mph, which is considered outstanding. Snaps with power and doesn't show a prominent hitch in his delivery. </p>
+
+<p>ROUND 6, PICK 2 (178): MATTHEW WELLS, LB | MISSISSIPPI STATE
+NFL.com Pick Analysis: New England has a knack for finding pieces to their own unique puzzle and Wells is another example of that. He blew up his Pro Day running in the 4.4s and he's battle tested. He will likely find a role as a special teams cover man early in his career. --Mark Dulgerian</p>
+
+<p>ROUND 6, PICK 26 (202): A.J. DERBY, TE | ARKANSAS
+NFL.com Pick Analysis: Is it any surprise Bill Belichick adds another tight end to his roster? Derby is a raw athlete who converted from linebacker to quarterback and now to tight end. He is creative with the ball in his hands but there is work to be done from the snap to the catch. --Mark Dulgerian </p>
+
+<p>ROUND 7, PICK 30 (247): DARRYL ROBERTS, CB | MARSHALL
+NFL.com Pick Analysis: The Patriots find an excellent athlete who put up explosive numbers at his pro day (4.38 40, 1.48 10-Yd, 39 VJ). He'll need considerable technique work but he's a low risk pick with some upside down the line. --Mark Dulgerian </p>
+
+<p> ROUND 7, PICK 36 (253): XZAVIER DICKSON, DL | ALABAMA
+NFL.com Pick Analysis: Belichick will kick the tires on a Saban-groomed outside linebacker who was versatile in multiple fronts the Crimson Tide employed. --Mark Dulgerian </p>
+
+<div class="MostPromising1MOVE1">
+<h5>Most promising draft pick of 2015</h5>
+<img src="22015PromisingDraft.jpg" alt="En bild">
+</div>
+
+
+								<h5>SEASON</h5>
+<p>The 2015 New England Patriots season was the franchise's 46th season in the National Football League, the 56th overall and the 16th under head coach Bill Belichick. The Patriots entered the season as the defending Super Bowl champions.</p>
+
+<p>After going 10–0 to begin the season, the Patriots' first loss came against the Denver Broncos in overtime in Week 12. They would go on to lose four of their last six games, ultimately finishing the regular season with a 12–4 record for the fourth straight year. In Week 14, the Patriots clinched their seventh straight AFC East division title. By this, the Patriots tied the 1979 Los Angeles Rams for most consecutive division titles. As the second seeded team in the AFC, they secured a first-round bye for the playoffs and home-field advantage for their first playoff game.</p>
+
+<p>In the divisional round of the playoffs, the Patriots defeated the Kansas City Chiefs 27–20 to advance to the AFC Championship for the fifth straight year, where they fell on the road to the eventual Super Bowl 50 champion Denver Broncos 20–18.</p>
+
+
+                            </div>
+                            
+                     
+                            </article>
+                 
+                 <div class="Square">
+                 
+            
+   
+  	<div class="Highlights">
+     <h4>Highlights from the 2015 NFL draft</h4> 
+     <br>
+       <img src="2Draft4.png" alt="Bild från draften">
+     <br>
+    <img src="2DRAFT1.jpg" alt="Bild från draften">
+    
+     <br>
+     <img src="2Draft3.jpg" alt="Bild från draften">
+     <br>
+    <img src="22015PromisingDraft.jpg" alt="Bild från draften">
+     <br>
+      <img src="2Draft5.png" alt="Bild från draften">
+     <br>
+      <img src="2Draft6.jpg" alt="Bild från draften">
+     <br>
+      <img src="2Draft7.jpg" alt="Bild från draften">
+     <br>
+      <img src="2Draft8.jpg" alt="Bild från draften">
+     
+
+     </div>
+    </div>
+    </div>
+     
+        
+                 
+               
+     <!--Allt som innefattar bakgrunden till article, all text, bilder, etc-->
+		
+        
+  
+</body>
+</html>

@@ -1,0 +1,2852 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	height:100%;
+	width:100%;
+	margin:0;
+	
+
+}
+
+h5{
+	text-align:center;
+	font-size:22px;
+}
+
+/* Clearing floats */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+    
+}
+
+/* Mini reset, no margins, paddings or bullets */
+.menu,
+.submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+    
+}
+
+.menu,
+.submenu1 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+    
+}
+
+.menu,
+.submenu2 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+    
+}
+
+/* Main level */
+.menu {			
+  margin: 50px auto;
+  width: 800px;
+  /* http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value */
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  margin-top:-4.5%;
+  margin-left:560px;
+    
+}
+
+.menu > li {
+  background: #34495e;
+  float: left;
+  position: relative;
+  transform: skewX(25deg);
+  z-index:999;
+   
+ 
+
+ 
+}
+
+.menu a {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Arial, Helvetica;
+  font-size: 14px;
+  
+}		
+
+.menu li:hover {
+  background: #e74c3c;
+  
+}		
+
+.menu > li > a {
+  transform: skewX(-25deg);
+  padding: 1em 2em;
+}
+
+
+/* Dropdown */
+.submenu {
+  position: absolute;
+  width: 200px;
+  left: 50%; margin-left: -100px;
+  transform: skewX(-25deg);
+  transform-origin: left top;
+    
+
+}
+
+.submenu li {
+  background-color: #34495e;
+  position: relative;
+  overflow: hidden;		
+}						
+
+.submenu > li > a {
+  padding: 1em 2em;			
+}
+
+.submenu > li::after {
+  content: '';
+  position: absolute;
+  top: -125%;
+  height: 100%;
+  width: 100%;			
+  box-shadow: 0 0 50px rgba(0, 0, 0, .9);			
+}		
+
+/* Dropdown 2*/
+
+.submenu1 {
+  position: absolute;
+  width: 200px;
+  left: 50%; margin-left: -100px;
+  transform: skewX(-25deg);
+  transform-origin: left top;
+}
+
+.submenu1 li {
+  background-color: #34495e;
+  position: relative;
+  overflow: hidden;		
+}						
+
+.submenu1 > li > a {
+  padding: 1em 2em;			
+}
+
+.submenu1 > li::after {
+  content: '';
+  position: absolute;
+  top: -125%;
+  height: 100%;
+  width: 100%;			
+  box-shadow: 0 0 50px rgba(0, 0, 0, .9);			
+}	
+
+/* Dropdown 3 */
+
+.submenu2 {
+  position: absolute;
+  width: 200px;
+  left: 50%; margin-left: -100px;
+  transform: skewX(-25deg);
+  transform-origin: left top;
+}
+
+.submenu2 li {
+  background-color: #34495e;
+  position: relative;
+  overflow: hidden;		
+}						
+
+.submenu2 > li > a {
+  padding: 1em 2em;			
+}
+
+.submenu2 > li::after {
+  content: '';
+  position: absolute;
+  top: -125%;
+  height: 100%;
+  width: 100%;			
+  box-shadow: 0 0 50px rgba(0, 0, 0, .9);			
+}	
+
+/* Odd stuff 3 */
+
+.submenu2 > li:nth-child(odd){
+  transform: skewX(-25deg) translateX(0);
+}
+
+.submenu2 > li:nth-child(odd) > a {
+  transform: skewX(25deg);
+}
+
+.submenu2 > li:nth-child(odd)::after {
+  right: -50%;
+  transform: skewX(-25deg) rotate(3deg);
+}				
+
+/* Even stuff */
+.submenu2 > li:nth-child(even){
+  transform: skewX(25deg) translateX(0);
+}
+
+.submenu2 > li:nth-child(even) > a {
+  transform: skewX(-25deg);
+}
+
+.submenu2 > li:nth-child(even)::after {
+  left: -50%;
+  transform: skewX(25deg) rotate(3deg);
+}
+	
+
+
+/* Odd stuff */
+.submenu > li:nth-child(odd){
+  transform: skewX(-25deg) translateX(0);
+}
+
+.submenu > li:nth-child(odd) > a {
+  transform: skewX(25deg);
+}
+
+.submenu > li:nth-child(odd)::after {
+  right: -50%;
+  transform: skewX(-25deg) rotate(3deg);
+}				
+
+/* Even stuff */
+.submenu > li:nth-child(even){
+  transform: skewX(25deg) translateX(0);
+}
+
+.submenu > li:nth-child(even) > a {
+  transform: skewX(-25deg);
+}
+
+.submenu > li:nth-child(even)::after {
+  left: -50%;
+  transform: skewX(25deg) rotate(3deg);
+}
+
+/* odd stuff 2 */
+
+.submenu1 > li:nth-child(odd){
+  transform: skewX(-25deg) translateX(0);
+}
+
+.submenu1 > li:nth-child(odd) > a {
+  transform: skewX(25deg);
+}
+
+.submenu1 > li:nth-child(odd)::after {
+  right: -50%;
+  transform: skewX(-25deg) rotate(3deg);
+}				
+
+/* Even stuff */
+.submenu1 > li:nth-child(even){
+  transform: skewX(25deg) translateX(0);
+}
+
+.submenu1 > li:nth-child(even) > a {
+  transform: skewX(-25deg);
+}
+
+.submenu1 > li:nth-child(even)::after {
+  left: -50%;
+  transform: skewX(25deg) rotate(3deg);
+}
+
+
+/* Show dropdown */
+.submenu,
+.submenu li {
+  opacity: 0;
+  visibility: hidden;			
+}
+
+.submenu li {
+  transition: .2s ease transform;
+}
+
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li {
+  opacity: 1;
+  visibility: visible;
+}		
+
+.menu > li:hover .submenu li:nth-child(even){
+  transform: skewX(25deg) translateX(15px);			
+}
+
+.menu > li:hover .submenu li:nth-child(odd){
+  transform: skewX(-25deg) translateX(-15px);			
+}
+
+/* Show dropdown 2 */
+
+.submenu1,
+.submenu1 li {
+  opacity: 0;
+  visibility: hidden;			
+}
+
+.submenu1 li {
+  transition: .2s ease transform;
+}
+
+.menu > li:hover .submenu1,
+.menu > li:hover .submenu1 li {
+  opacity: 1;
+  visibility: visible;
+}		
+
+.menu > li:hover .submenu1 li:nth-child(even){
+  transform: skewX(25deg) translateX(15px);			
+}
+
+.menu > li:hover .submenu1 li:nth-child(odd){
+  transform: skewX(-25deg) translateX(-15px);			
+}
+
+/* Show dropdown 3 */
+
+.submenu2,
+.submenu2 li {
+  opacity: 0;
+  visibility: hidden;			
+}
+
+.submenu2 li {
+  transition: .2s ease transform;
+}
+
+.menu > li:hover .submenu2,
+.menu > li:hover .submenu2 li {
+  opacity: 1;
+  visibility: visible;
+}		
+
+.menu > li:hover .submenu2 li:nth-child(even){
+  transform: skewX(25deg) translateX(15px);			
+}
+
+.menu > li:hover .submenu2 li:nth-child(odd){
+  transform: skewX(-25deg) translateX(-15px);			
+}
+#Storbox{
+	width:100%;
+	height:100%;
+	position:absolute;
+	background-image:url(patriots-touchdown.gif);
+	background-size:100% 100%;
+
+}
+/* Seasons */
+#Storbox2{
+	width:100%;
+	height:100%;
+
+}
+
+.MostPromising1 img{
+	width:40%;
+	text-align:center;
+	margin-left:12%;
+	
+}
+
+.MostPromising img{
+	width:40%;
+	text-align:center;
+	margin-left:30%;
+	
+} 
+
+.MostPromising1MOVE img{
+	width:40%;
+	text-align:center;
+	margin-left:12%;
+	
+}
+
+.MostPromising1MOVE1 img{
+	width:40%;
+	text-align:center;
+	margin-left:12%;
+	
+}
+
+.Bilderna{
+	float:right;
+	text-align:center;
+}
+
+.Patriots img{
+	width:48%;
+	height:50%;
+	position:absolute;
+	margin-left:550px;
+	margin-top:-55px;
+	}
+	
+.HeaderNFL2 img{
+	width:5%;
+	height:9.3%;
+	position:absolute;
+	margin-left:87%;
+	margin-top:-5.25%;
+	font-size:30px;
+	
+}
+
+.HeaderPATRIOTS2 img{
+	width:10%;
+	height:8,5%;
+	position:absolute;
+	margin-left:20px;
+	margin-top:-100px;
+	font-size:10px;
+}
+
+.Background2{
+	height:32%; 
+	width:70%;
+	background-color:#0D254C;
+	background-size:100% 100%;
+	margin-left:15%;
+	margin-top:-2%;
+	
+}
+/*!
+Schema, resultat, textrutor etc
+*/
+.Schema {
+	height:100%;
+	width:40%;
+	float:right;
+	text-align:center;
+	
+}
+
+.Schema img {
+	height:100%;
+	width:100%;
+	float:right;
+	margin-top:-4.5%;
+	
+}
+
+.Resultat{
+	height:100%;
+	width:100%;
+	float:right;
+
+}
+
+.Resultat img{
+	height:80%;
+	width:100%;
+	margin-top:-4.7%;
+
+}
+
+.Schedule{
+	background-color: #C80815;
+	margin-top:-4.6%;
+	font-size:25px;
+	
+	
+}
+
+.Results{
+	background-color: #C80815;
+	margin-top:-4.7%;
+	font-size:25px;
+
+	 
+}
+
+.Square {height:120%;
+
+width:60%;
+margin-left:15%;
+background-image:url(Border.png);
+background-size:100% 100%;
+background-color:#0D254C;
+padding:5%;
+}
+
+
+
+p{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	 
+}
+
+h5{
+	color:#FC0;
+}/*! Schema, resultat, textrutor etc */
+
+
+ol, ul {
+	list-style: none; 
+}
+
+
+@font-face {
+	font-family: 'AvantGarde LT';
+	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/771828/hinted-AvantGardeLT-Bold.eot');
+	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/771828/hinted-AvantGardeLT-Bold.eot?#iefix') format('embedded-opentype'),
+		url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/771828/hinted-AvantGardeLT-Bold.woff') format('woff'),
+		url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/771828/hinted-AvantGardeLT-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+} /* Verkar inte behövas, ta bort isåfall, undersök senare */
+
+#container {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    transform: translateY(-50%);
+	
+
+}
+
+#days, #hours, #minutes, #seconds {
+    color:#C80815;
+    font-size: 4em;
+    background: transparent;
+    font-family: 'AvantGarde LT';
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-shadow: 1px 1px 2px rgba(30, 30, 30, 1);
+	margin-top:3%;
+}
+
+#days::after, #hours::after, #minutes::after { 
+    content: ":";
+    position: relative;
+    top: 0vh;
+}
+
+span {
+    padding-right: 10px;
+}
+
+#footer {
+    font-family: 'AvantGarde LT';
+    text-transform: uppercase;
+    width: 100%;
+    color:#D6D6D6;
+    text-align: center;
+    font-size: 0.8em;
+    text-shadow: 1px 1px 2px rgba(30, 30, 30, 1);
+    padding: 5px 5px;
+} /* Kod för klockan som visas på skärmen */
+
+h3{
+	text-align:center;
+	color:#F90;
+}
+
+
+.Highlights{
+	text-align:center;
+	color:#C80815;
+	font-size:30px;
+	
+}
+.Highlights img{
+	width:60%;
+	height:70%;
+	
+}
+
+/* här slutar kod för seasons */
+
+
+
+/* Hall Of Fame */
+
+
+#Article2{
+	width:80%;
+	height:100%;
+	margin-top:2%;
+	margin-left:10%;
+	background-color:#0D254C;
+}
+h1{
+	font-size:40px;
+	color:#D6D6D6;
+	text-align:center;
+}
+h4{
+	color:#C80815;
+}
+
+.ContributorsTitle{
+	text-align:center;
+	font-size:5px;
+}
+.PlayersTitle{
+	text-align:center;
+}
+
+.Contributors1 {
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	
+}
+
+.Contributors1 img{
+	margin-top:4%;
+	width:30%;
+	height:30%;
+}
+
+.Contributors2{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-6%;
+}
+.Contributors2 img{
+	width:30%;
+	height:30%;
+}
+.PlayersTitle{
+	margin-top:-10%;
+}
+.Player1{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+
+}
+
+.Player1 img{
+	width:30%;
+	height:30%;
+
+}
+.Player2{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player2 img{
+	width:30%;
+	height:30%;
+
+}
+
+.Player3{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player3 img{
+	width:30%;
+	height:30%;
+
+}
+
+.Player4{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player4 img{
+	width:30%;
+	height:30%;
+
+}
+
+
+.Player5{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player5 img{
+	width:30%;
+	height:30%;
+
+}
+
+
+.Player6{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player6 img{
+	width:30%;
+	height:30%;
+
+}
+
+
+.Player7{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player7 img{
+	width:30%;
+	height:30%;
+
+}
+
+
+.Player8{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player8 img{
+	width:30%;
+	height:30%;
+
+}
+
+.Player9{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player9 img{
+	width:30%;
+	height:30%;
+
+}
+
+.Player10{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player10 img{
+	width:30%;
+	height:30%;
+
+}
+
+.Player11{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player11 img{
+	width:30%;
+	height:30%;
+
+}
+.Player12{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player12 img{
+	width:30%;
+	height:30%;
+
+}
+.Player13{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player13 img{
+	width:30%;
+	height:30%;
+
+}
+.Player14{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player14 img{
+	width:30%;
+	height:30%;
+
+}
+.Player15{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player15 img{
+	width:30%;
+	height:30%;
+
+}
+.Player16{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player16 img{
+	width:30%;
+	height:30%;
+
+}
+.Player17{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player17 img{
+	width:30%;
+	height:30%;
+
+}
+.Player18{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player18 img{
+	width:30%;
+	height:30%;
+
+}
+.Player19{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player19 img{
+	width:30%;
+	height:30%;
+
+}
+.Player20{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player20 img{
+	width:30%;
+	height:30%;
+
+}
+
+.Player21{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player21 img{
+	width:30%;
+	height:30%;
+
+}
+
+.Player22{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player22 img{
+	width:30%;
+	height:30%;
+
+}
+
+.Player23{
+	text-align:center;
+	width:80%;
+	height:100%;
+	margin-left:10%;
+	margin-top:-7%;
+
+}
+
+.Player23 img{
+	width:30%;
+	height:30%;
+
+}
+
+#line{
+  height:1px;
+  width:100%;
+  background: #357F71;
+}
+
+.linje{
+	text-align:center;
+	margin-top:-8%;
+	
+}
+.linje img{
+	width:50%;
+	height:50%;
+}
+
+
+#line{
+  height:1px;
+  width:100%;
+  background: #357F71;
+} /* vart informationen är hämtad ifrån */
+
+.Patriots1 img{
+	width:20%;
+	height:10%;
+	float:left;
+	
+}
+
+
+.Patriots2 img{
+	width:20%;
+	height:10%;
+	float:right;
+	}
+	
+.HallOfFame{
+	margin-top:-11%;
+	text-align:center;
+	padding:2%;
+	
+}
+
+.HallOfFame img{
+width:30%;
+height:15%;
+
+}
+/* här slutar kod för Hall of Fame */
+
+
+/* Roster */
+
+/** Helper **/
+.clear:before, .clear:after {
+    content: " ";
+    display: table
+}
+
+.clear:after {
+    clear: both
+}
+
+
+
+	#table {
+		display: table;
+	 	width: 100%; 
+	 	background:#D6D6D6;
+	 	margin: 0;
+	 	box-sizing: border-box;
+		
+		
+
+	 }
+
+	 .caption {
+	 	display: block;
+	 	width: 100%;
+	 	background:#0D254C;
+	 	height: 55px;
+	 	padding-left: 10px;
+	 	color: #fff;
+	 	font-size: 20px;
+	 	line-height: 55px;
+	 	text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+	 	box-sizing: border-box;
+		text-align:center;
+		
+		
+	 }
+
+
+	 .header-row {
+	 	background: #8b8b8b;
+	 	color:#C80815;
+		
+	 }
+
+	.row {
+		display: table-row;
+		
+		
+	}
+
+	.cell {
+		display: table-cell;
+		
+		
+		padding: 6px; 
+		border-bottom: 1px solid #e5e5e5;
+		text-align: center;
+	}
+
+	.primary {
+		text-align: left;
+		
+	
+	}
+
+
+	input[type="radio"],
+	input[type="checkbox"]{
+		
+		display: none;
+		
+	}
+
+
+	@media only screen and (max-width: 700px)  {
+
+		
+
+		#table {
+			display: block;
+			margin: 44px 0 0 0;
+			
+			
+			
+		}
+
+		.caption {
+			position: fixed;
+			top: 0;
+			text-align: center;
+			height: 44px;
+			line-height: 44px;
+			z-index: 5;
+			border-bottom: 2px solid #999;
+	
+			
+		}
+
+		.row { 
+			position: relative;
+			display: block;
+			border-bottom: 1px solid #ccc; 
+			
+			
+
+		}
+
+		.header-row {
+			display: none;
+			
+			
+		}
+		
+		.cell { 
+			display: block;
+
+			border: none;
+			position: relative;
+			height: 45px;
+			line-height: 45px;
+			text-align: left;
+			
+		}
+
+		.primary:after {
+			content: "";
+			display: block;
+			position: absolute;
+			right:20px;
+			top:18px;
+			z-index: 2;
+			width: 0; 
+			height: 0; 
+			border-top: 10px solid transparent;
+			border-bottom: 10px solid transparent; 
+			border-right:10px solid #ccc;
+
+		}
+
+		.cell:nth-of-type(n+2) { 
+			display: none; 
+		}
+
+
+		input[type="radio"],
+		input[type="checkbox"] {
+			display: block;
+			position: absolute;
+			z-index: 1;
+			width: 99%;
+			height: 100%;
+			opacity: 0;
+		}
+    
+    input[type="radio"]:checked,
+		input[type="checkbox"]:checked {
+		  z-index: -1;
+		}
+
+		input[type="radio"]:checked ~ .cell,
+		input[type="checkbox"]:checked ~ .cell {
+			display: block;
+
+			border-bottom: 1px solid #eee; 
+		}
+
+		input[type="radio"]:checked ~ .cell:nth-of-type(n+2),
+		input[type="checkbox"]:checked ~ .cell:nth-of-type(n+2) {
+			
+			background: #e0e0e0;
+		}
+
+		input[type="radio"]:checked ~ .cell:nth-of-type(n+2):before,
+		input[type="checkbox"]:checked ~ .cell:nth-of-type(n+2):before {
+			content: attr(data-label);
+
+			display: inline-block;
+			width: 60px;
+			background: #999;
+			border-radius: 10px;
+			height: 20px;
+			margin-right: 10px;
+			font-size: 12px;
+			line-height: 20px;
+			text-align: center;
+			color: white;
+
+		}
+
+		input[type="radio"]:checked ~ .primary,
+		input[type="checkbox"]:checked ~ .primary  {
+			border-bottom: 2px solid #999;
+		}
+
+		input[type="radio"]:checked ~ .primary:after,
+		input[type="checkbox"]:checked ~ .primary:after {
+	 		position: absolute;
+			right:18px;
+			top:22px;
+			border-right: 10px solid transparent;
+			border-left: 10px solid transparent; 
+			border-top:10px solid #ccc;
+			z-index: 2;
+		}
+	}
+	
+	
+h3{
+  text-align: center; 
+  font-size:40px;
+  margin-top:-0.33%;
+  color:#0D254C;
+  
+  
+}
+
+h2{
+  text-align: center; 
+  font-size:40px;
+  margin-top:-0.33%;
+  color:#699;
+  }
+
+#photo-16{
+	background-image:url(spelare.jpg);
+
+}
+#photo-26 {
+  background-image:url(LIL%20Superbowl%20Champions.jpg);
+}
+#photo-36{
+	background-image:url(Spelare2.jpg);
+}
+#photo-46{
+	background-image:url(spelare1.jpg);
+}
+
+/* Här slutar kod för Roster */
+
+
+
+
+
+
+
+
+
+
+/* Player of the month */
+#Storbox1{
+	width:100%;
+	height:100%;
+	z-index:-1;	
+}
+.menu2 {
+  display: block;
+  width: 100px;
+  perspective: 100px;
+  position:absolute;
+}
+
+.HeaderNFL1 img{
+	width:5%;
+	height:9.3%;
+	position:absolute;
+	margin-left:90%;
+	margin-top:-103px;
+}
+
+.HeaderPATRIOTS1 img{
+	width:10%;
+	height:8,5%;
+	position:absolute;
+	margin-left:20px;
+	margin-top:-100px;
+	font-size:10px;
+}
+/* Player of the month slutar här */
+
+header{
+	width:100%;
+	height:30%;
+}
+
+.Huvudmeny{
+	width:100%;
+	height:100px;
+	background-color:#0D254C;
+	
+}
+.Huvudmeny1{
+	width:100%;
+	height:100px;
+	background-color:#0D254C;
+	
+}
+
+.Huvudmeny2{
+width:103%;
+	height:100px;
+	background-color:#0D254C;
+}
+
+
+
+.PatriotsFramförGIF img{
+	width:48%;
+	height:50%;
+	position:absolute;
+	margin-left:29%;
+	margin-top:-8.5%;
+	float:none;
+}
+
+
+	
+.HeaderNFL img{
+	width:5%;
+	height:9.3%;
+	position:absolute;
+	margin-left:85%;
+	margin-top:-5.5%;
+
+	
+	
+}
+
+.HeaderPATRIOTS img{
+	width:10%;
+	height:8,5%;
+	position:absolute;
+	margin-left:5%;
+	margin-top:-5.3%;
+
+	
+}
+
+
+
+
+/*hamburgarmeny*/
+.bar {
+  display: block;
+  width: 50px;
+  height: 9px;
+  background: black;
+  margin: 7px 7px;
+  transition: top .4s linear, transform .4s linear;
+  transform-style: preserve-3d;
+  position: relative;
+  top: 0;
+  border-radius: 5px;
+}
+
+.menu1 {
+  display: block;
+  width: 100px;
+  perspective: 100px;
+  position:absolute;
+}
+
+
+
+.hamburger {
+  cursor: pointer;
+  display: block;
+  width: 65px;
+  margin: 0 auto;
+}
+
+#clicker {
+  display: none;
+}
+
+#clicker:checked ~ .menu1 label #bar1 {
+  transform: rotateZ(45deg);
+  top: 16px;
+  transition: top .4s linear, transform .4s linear;
+}
+
+#clicker:checked ~ .menu1 label #bar2 {
+  transform: rotateZ(-45deg);
+  transition: top .4s linear, transform .4s linear;
+}
+
+#clicker:checked ~ .menu1 label #bar3 {
+  transform: rotateZ(-45deg);
+  top: -16px;
+  transition: top .4s linear, transform .4s linear;
+}
+
+
+
+.menu-list {
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.menu-list ul li {
+  list-style: none;
+}
+
+.menu-list ul li a {
+  position: relative;
+  text-decoration: none;
+  padding: 5px 0;
+  display: block;
+  width: 100px;
+  background: #ddd;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  color: black;
+  padding-left: 7px;
+  border-radius: 5px;
+}
+
+#clicker:not(:checked) ~ .menu1 .menu-list ul li a {
+  transform: rotateX(90deg) scaleY(0);
+  transform-origin: 0% 0%;
+  transition: all linear .2s;
+  transform-style: preserve-3d;
+}
+
+#clicker:checked ~ .menu1 .menu-list ul li a {
+  transform: none;
+  transition: all linear .2s;
+  transform-style: preserve-3d;
+}
+
+#clicker:not(:checked) ~ .menu1 .menu-list ul li #item1 {
+  transition-delay: .8s;
+}
+
+#clicker:not(:checked) ~ .menu1 .menu-list ul li #item2 {
+  transition-delay: .6s;
+}
+#clicker:not(:checked) ~ .menu1 .menu-list ul li #item3 {
+  transition-delay: .4s;
+}
+#clicker:not(:checked) ~ .menu1 .menu-list ul li #item4 {
+  transition-delay: .2s;
+}
+
+#clicker:checked ~ .menu1 .menu-list ul li #item2 {
+  transition-delay: .2s;
+}
+
+#clicker:checked ~ .menu1 .menu-list ul li #item3 {
+  transition-delay: .4s;
+}
+#clicker:checked ~ .menu1 .menu-list ul li #item4 {
+  transition-delay: .6s;
+}
+#clicker:checked ~ .menu1 .menu-list ul li #item5 {
+  transition-delay: .8s;
+} /* menu 1 */
+/* menu 1*/
+
+#clicker:not(:checked) ~ .menu2 .menu-list ul li a {
+  transform: rotateX(90deg) scaleY(0);
+  transform-origin: 0% 0%;
+  transition: all linear .2s;
+  transform-style: preserve-3d;
+}
+
+#clicker:checked ~ .menu2 .menu-list ul li a {
+  transform: none;
+  transition: all linear .2s;
+  transform-style: preserve-3d;
+}
+
+#clicker:not(:checked) ~ .menu2 .menu-list ul li #item1 {
+  transition-delay: .8s;
+}
+
+#clicker:not(:checked) ~ .menu2 .menu-list ul li #item2 {
+  transition-delay: .6s;
+}
+#clicker:not(:checked) ~ .menu2 .menu-list ul li #item3 {
+  transition-delay: .4s;
+}
+#clicker:not(:checked) ~ .menu2 .menu-list ul li #item4 {
+  transition-delay: .2s;
+}
+
+#clicker:checked ~ .menu2 .menu-list ul li #item2 {
+  transition-delay: .2s;
+}
+
+#clicker:checked ~ .menu2 .menu-list ul li #item3 {
+  transition-delay: .4s;
+}
+#clicker:checked ~ .menu2 .menu-list ul li #item4 {
+  transition-delay: .6s;
+}
+#clicker:checked ~ .menu2 .menu-list ul li #item5 {
+  transition-delay: .8s;
+}
+
+#clicker:checked ~ .menu2 label #bar1 {
+  transform: rotateZ(45deg);
+  top: 16px;
+  transition: top .4s linear, transform .4s linear;
+}
+
+#clicker:checked ~ .menu2 label #bar2 {
+  transform: rotateZ(-45deg);
+  transition: top .4s linear, transform .4s linear;
+}
+
+#clicker:checked ~ .menu2 label #bar3 {
+  transform: rotateZ(-45deg);
+  top: -16px;
+  transition: top .4s linear, transform .4s linear;
+} /* menu 2*/
+
+
+
+/* Allt som innefattar Player Of The Month, det mesta */
+
+/*!
+Bildspel
+*/
+.contant{
+	max-width: 960px;
+	/*margin-top:-58.78%;*/
+	margin-left:25%; /* Styr positioneringen i sidled */
+	position: relative;
+	padding: 1% 0;
+	overflow: hidden;
+	z-index:1;
+	margin-top:-2.6%;
+}h1{
+  text-align: center; 
+  font-size:27px;
+  margin-top:-0.33%;
+  color: #C80815;
+  
+}
+
+h3{
+  text-align: center; 
+  font-size:40px;
+  margin-top:-0.33%;
+  color:#0D254C;
+  
+  
+}
+
+h2{
+  text-align: center; 
+  font-size:40px;
+  margin-top:-0.33%;
+  color:#699;
+  }
+
+
+.intro{
+	position: relative;
+	width: 1000%; /* Styr bredden av bildspelet */ 
+	height: 600px; /* Styr höjden av bildspelet */
+	margin-top:8px;
+	overflow: hidden;
+	background: #f0f0f0;
+	 -webkit-animation: slide 25s infinite alternate ease;
+	        animation: slide 25s infinite alternate ease;
+			z-index:2;
+			
+}.img-contant{
+	float:left;
+	width: 960px; /* styr storleken på bilden i bredden */
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index:-3;
+	
+}
+	
+	/*!
+Bild 1
+*/
+
+
+
+#photo-1{
+	background-image:url(BradyGOAT.jpg);
+	
+
+}
+/*!
+Bild 2
+*/
+#photo-2 {
+  background-image:url(TomBrady2.jpg);
+}
+/*!
+Bild 3
+*/
+#photo-3{
+	background-image:url(TomBrady.jpg);
+}
+/*!
+Bild 4
+*/
+#photo-4{
+	background-image:url(Tom.jpg);
+}
+#photo-12{
+	background-image:url(StephenGostkowski1.jpg);
+
+}
+/*!
+Bild 2
+*/
+#photo-22 {
+  background-image:url(StephenGostkowski2.jpg);
+}
+/*!
+Bild 3
+*/
+#photo-32{
+	background-image:url(StephenGostkowski3.jpg);
+}
+/*!
+Bild 4
+*/
+#photo-42{
+	background-image:url(StephenGostkowski4.jpg)
+}
+
+	/*!
+Bild 1
+*/
+#photo-13{
+	background-image:url(RobertGronkowski1.jpg);
+
+}
+/*!
+Bild 2
+*/
+#photo-23 {
+  background-image:url(RobertGronkowski2.jpg);
+}
+/*!
+Bild 3
+*/
+#photo-33{
+	background-image:url(RobertGronkowski3.jpeg);
+}
+/*!
+Bild 4
+*/
+#photo-43{
+	background-image:url(RobertGronkowski4.jpg);
+}
+
+#photo-14{
+	background-image:url(MalcolmButler1.jpg);
+}
+/*!
+Bild 2
+*/
+#photo-24 {
+  background-image:url(MalcolmButler2.jpg);
+}
+/*!
+Bild 3
+*/
+#photo-34{
+	background-image:url(MalcolmButler3.jpg);
+}
+/*!
+Bild 4
+*/
+#photo-44{
+	background-image:url(MalcolmButler4.jpg);
+}
+
+/*!
+Bakgrundsbild, Tom Brady, Stats, information i text
+*/
+.Background1{
+	height:100%;
+	width:50%;
+	margin-left:25%;
+	background-image:url(Denna.Patriots-Banner.jpg);
+	background-size: 100% 100%;
+	margin-top:-1%;
+}
+
+
+/*!
+Porträtt
+*/
+.Portrait {
+	height:100%;
+	width:40%;
+	float:right;
+}
+
+.Portrait img {
+	height:100%;
+	width:100%;
+	float:right;
+}
+/*!
+h5
+*/
+h5{
+	margin:0.5%;
+}
+/*!
+Stats
+*/
+.Stats{
+	width:100%;
+	height:13%;
+	margin-left:60%;
+	background-color:#D6D6D6;
+	float:right;
+}
+/*!
+Text
+*/
+p{
+	color:#FFF;
+}
+/*!
+Video
+*/
+video {
+  width: 65%;
+  height:auto;
+  margin-top:7%;
+  margin-left:19%;
+  padding:0%;
+}
+
+/* Här slutar player of the month */
+
+
+/* Menyn försvinner då den lägger sig konstigt */
+@media (max-width: 1400px) {
+    .menu { display: none; }
+}
+
+@media screen and (min-width: 1400px){
+
+	.menu1{display:none;}
+	
+}
+
+/*Skärnupplösningar för startsida*/
+
+	
+@media screen and (max-width:1920px){
+	#Storbox{
+	
+	width:1920px;
+	}
+	.HeaderNFL {margin-top:0.5%;}
+	.PatriotsFramförGIF{margin-top:0.7%;}
+	.HeaderPATRIOTS{ margin-top:-0.5%;}
+	.menu{margin-left:30%;}
+}
+
+@media screen and (max-width:1800px){
+	#Storbox{
+	
+	width:1800px;
+	}
+	
+	.HeaderNFL {margin-top:-0.05%;}
+	.PatriotsFramförGIF{margin-top:0.5%;}
+	.HeaderPATRIOTS{ margin-top:-0.4%;}
+	.menu{margin-left:29%;}
+}
+
+@media screen and (max-width:1700px){
+	#Storbox{
+	
+	width:1700px;
+	}
+	
+	.HeaderNFL {margin-top:0%;}
+	.PatriotsFramförGIF{margin-top:0%;}
+	.HeaderPATRIOTS{ margin-top:-0.1%;}
+	.menu{margin-left:27%;}
+}
+
+
+@media screen and (max-width:1600px){
+	#Storbox{
+	
+	width:1600px;
+	}
+	.HeaderNFL {margin-top:0.3%;}
+	.PatriotsFramförGIF{margin-top:-0.5%;}
+	.HeaderPATRIOTS{ margin-top:0.5%;}
+	.menu{margin-top:-5%; margin-left:25%;}
+}
+
+
+@media screen and (max-width:1500px){
+	#Storbox{
+
+	width:1500px;
+	}
+	
+	.HeaderNFL {margin-top:0.5%;}
+	.PatriotsFramförGIF{margin-top:-1.1%;}
+	.HeaderPATRIOTS{ margin-top:-1%;}
+	
+
+	
+}
+
+@media screen and (max-width:1400px){
+	#Storbox{
+	width:1400px;
+	}
+	.menu1{margin-top:-17%; margin-left:-1%;}
+	.HeaderNFL {margin-top:0.5%;}
+	.HeaderNFL img {height:10%;}
+	.PatriotsFramförGIF{margin-top:-1.7%;}
+	.HeaderPATRIOTS{ margin-top:1.4%; margin-left:1%;}
+	
+}
+@media screen and (max-width:1300px){
+	#Storbox{
+	
+	width:1300px;
+	}
+	
+	.menu1{margin-top:-20%; margin-left:-1%;}
+	.HeaderNFL {margin-top:1%;}
+	.PatriotsFramförGIF{margin-top:-2.5%;}
+	.HeaderPATRIOTS{ margin-top:2.5%;}
+	.HeaderPATRIOTS img{width:10%;}
+	
+}
+
+
+
+@media screen and (max-width:1200px){
+	#Storbox{
+	
+	width:1200px;
+	}
+	.menu1{margin-top:-19.3%; margin-left:-1%;}
+	.HeaderNFL {margin-top:1.2%; margin-left:4%;}
+	.PatriotsFramförGIF{margin-top:-3.5%;}
+	.HeaderPATRIOTS{ margin-top:2.5%;}
+}
+
+@media screen and (max-width:1100px){
+	#Storbox{
+	
+	width:1100px;
+	}
+	.menu1{margin-top:-21%; margin-left:-1%;}
+	.HeaderNFL {margin-top:1.5%;}
+	.PatriotsFramförGIF{margin-top:-4.5%;}
+	.HeaderPATRIOTS{ margin-top:0%; margin-left:5%;}
+	.HeaderPATRIOTS img{ height:7%; width:10%;}
+
+}
+
+
+@media screen and (max-width:1000px){
+	#Storbox{
+	
+	width:1000px;
+	}
+	.menu1{margin-top:-23%; margin-left:-1%;}
+	.HeaderNFL {margin-top:2.2%; margin-left:-1%;}
+	.PatriotsFramförGIF{margin-top:-5.8%;}
+	.HeaderPATRIOTS{ margin-top:1%; margin-left:4%;}
+	.HeaderPATRIOTS img{ width:12%;}
+}
+
+@media screen and (max-width:900px){
+	#Storbox{
+	
+	width:900px;
+	}
+	.menu1{margin-top:-26%; margin-left:-1%;}
+	.HeaderNFL {margin-top:2.8%; margin-left:1%;}
+	.PatriotsFramförGIF{margin-top:-7.5%;}
+	.HeaderPATRIOTS{ margin-top:1%; margin-left:4%; }
+}
+
+@media screen and (max-width:800px){
+	#Storbox{
+	
+	width:800px;
+	}
+	
+	.menu1{margin-top:-29%; margin-left:-2%;}
+	.HeaderNFL {margin-top:3.4%; margin-left:-1%;}
+	.PatriotsFramförGIF{margin-top:-9.2%;}
+	.HeaderPATRIOTS{ margin-top:3%; margin-left:4%; }
+}
+@media screen and (max-width:700px){
+	#Storbox{
+	
+	width:700px;
+	}
+	.menu1{margin-top:-33%; margin-left:-2%;}
+	.HeaderNFL {margin-top:4%; margin-left:-1%;}
+	.PatriotsFramförGIF{margin-top:-12%;}
+	.HeaderPATRIOTS{ margin-top:6%; margin-left:6%;}
+}
+
+@media screen and (max-width:600px){
+	#Storbox{
+	
+	width:600px;
+	}
+	.menu1{margin-top:-39%; margin-left:-2%;}
+	.HeaderNFL {margin-top:5%; margin-left:-3%;}
+	.PatriotsFramförGIF{margin-top:-15.5%;}
+	.HeaderPATRIOTS{ margin-top:7%; margin-left:9%;}
+	.HeaderPATRIOTS img{ width:15%;}
+}
+
+@media screen and (max-width:500px){
+	#Storbox{
+	
+	width:500px;
+	}
+	.menu1{margin-top:-46%; margin-left:-3%;}
+	.HeaderNFL {margin-top:7.3%; margin-left:-3%;}
+	.PatriotsFramförGIF{margin-top:-20%;}
+	.HeaderPATRIOTS{ margin-top:10%; margin-left:8.5%;}
+	.HeaderPATRIOTS img{ width:17%;}
+}
+
+
+@media screen and (max-width:460px){
+	#Storbox{
+	
+	width:460px;
+	}
+	.menu1{margin-top:-52%; margin-left:-5%;}
+	.HeaderNFL {margin-top:8%; margin-left:-8%;}
+	.PatriotsFramförGIF{margin-top:-22.5%;}
+	.HeaderPATRIOTS{ margin-top:14%; margin-left:8%;}
+	.HeaderPATRIOTS img{ width:14%; height:6%;}
+
+}
+
+
+@media screen and (max-width:1366px) and (max-height:768px){
+	#Storbox{
+	
+	width:1366px;
+	}
+	
+	.menu1{margin-top:-13.5%; margin-left:0%;}
+	.HeaderNFL {margin-top:-0.4%; margin-left:-1%;}
+	.PatriotsFramförGIF{margin-top:1.3%; margin-left:0%;}
+	.HeaderPATRIOTS{ margin-top:-0.8%; margin-left:7%;}
+	.menu-list {
+  
+  font-size: 16.5px;
+}
+}
+
+/*Telefonupplösningar */
+
+/* Telefon lägger sig på sidan */
+@media screen and (max-width:700px) and (max-height:450px){
+	#Storbox{
+	
+	width:700px;
+	}
+	
+	.menu1{margin-top:-13.7%; margin-left:-1%;}
+	.HeaderNFL {margin-top:-0.5%; margin-left:-1%;}
+	.PatriotsFramförGIF{margin-top:1.4%;}
+	.HeaderPATRIOTS{ margin-top:-0.5%; margin-left:8%; }
+	.menu-list{font-size:9px;}
+	.Huvudmeny{height:55%;}
+	
+	
+}
+
+/* Telefon vanlig */
+@media screen and (max-width:450px) and (max-height:700px){
+	#Storbox{
+	
+	width:700px;
+	}
+	
+	.menu1{margin-top:-24%; margin-left:-1%;}
+	.HeaderNFL {margin-top:1.3%; margin-left:-1%;}
+	.PatriotsFramförGIF{margin-top:-4.2%;}
+	.HeaderPATRIOTS{ margin-top:3%; margin-left:6%; }
+	.menu-list{font-size:9px;}
+	.Huvudmeny{height:35%;}
+	
+	
+}
+
+
+/* Iphone 6 lägger sig på sidan */
+@media screen and (max-width:667px) and (max-height:375px){
+	#Storbox{
+	
+	width:667px;
+	}
+	
+	.menu1{margin-top:-12%; margin-left:-1%;}
+	.HeaderNFL {margin-top:-1%; margin-left:-1%;}
+	.PatriotsFramförGIF{margin-top:2.85%;}
+	.HeaderPATRIOTS{ margin-top:-1%; margin-left:8%; }
+	.menu-list{font-size:9px;}
+	
+	
+}
+
+/* Iphone 6 i vanligt läge */
+@media screen and (max-width:375px) and (max-height:667px){
+	#Storbox{
+	
+	width:375px;
+	}
+	
+	.menu1{margin-top:-42%; margin-left:-5%;}
+	.HeaderNFL {margin-top:4%; margin-left:-1%;}
+	.PatriotsFramförGIF{margin-top:-13.5%;; margin-left:0%;}
+	.HeaderPATRIOTS{ margin-top:9%; margin-left:12.5%;}
+	.menu-list {
+  
+  font-size: 15px;
+}
+.Huvudmeny{height:33%;}
+}
+
+/*!
+Mobilanpassning för Player Of The Month
+*/
+@-webkit-keyframes slide {
+    0%   {margin-left: 0px;}
+    25%  {margin-left: -960px;}
+    50%  {margin-left: -1920px;}
+    75%  {margin-left: -2880px;}
+    100% {margin-left: 0px;}
+}
+@keyframes slide {
+    0%   {margin-left: 0px;}
+    25%  {margin-left: -960px;}
+    50%  {margin-left: -1920px;}
+    75%  {margin-left: -2900px;}
+    100% {margin-left: 0px;}
+}
+	
+@media screen and (max-width:1920px){
+	#Storbox1{
+	width:1920px;
+	}
+	.caption{height:100%; width:50%; margin-left: 25%;  margin-top:-1%;}	
+	#table{height:100%; width:50%; margin-left: 25%; }
+	.contant{margin-top:-2.6%;  }
+	.menu{margin-left:29%;}
+	.HeaderNFL1{margin-top:0.8%; }
+	.Background1{margin-top:-1.85%;}
+	.HeaderPATRIOTS1{margin-top:-0.55%;}
+}
+
+@media screen and (max-width:1800px){
+	#Storbox1{
+	
+	width:1800px;
+	}
+	.caption{height:100%; width:53.35%; margin-left: 25%;  margin-top:-1%;}	
+	#table{height:100%; width:53.35%; margin-left: 25%; }
+	.contant{margin-top:-2.7%;  }
+	.Background1 {width:53.35%; margin-top:-1.9%; }
+	.menu{margin-left:29%; margin-top:-4.75%;}
+	.HeaderNFL1{margin-top:0.8%; }
+	.HeaderPATRIOTS1{margin-top:0%;}
+	
+	
+}
+
+@media screen and (max-width:1700px){
+	#Storbox1{
+	
+	width:1700px;
+	}
+	.caption{height:100%; width:56.45%; margin-left: 25%;  margin-top:-1%;}	
+	#table{height:100%; width:56.45%; margin-left: 25%; }
+	.contant{margin-top:-2.7%;  }
+	.Background1 {width:56.45%;margin-top:-2%; }
+	.menu{margin-left:29%; margin-top:-5.1%;}
+	.HeaderNFL1{margin-top:0.8%; }
+	.HeaderPATRIOTS1{margin-top:0%;}
+	
+
+}
+
+
+@media screen and (max-width:1600px){
+	#Storbox1{
+	
+	width:1600px;
+	}
+	.caption{height:100%; width:60%; margin-left: 21%;  margin-top:-1%;}	
+	#table{height:100%; width:60%; margin-left: 21%; }
+
+	.contant{margin-top:-3.1%; margin-left:21%; }
+	.Background1 {width:60%; margin-left:21%; }
+	.menu{margin-left:29%; margin-top:-5.1%;}
+	.HeaderNFL1{margin-top:0.8%; }
+	.HeaderPATRIOTS1{margin-top:0%;}
+}
+
+
+@media screen and (max-width:1500px){
+	#Storbox1{
+	
+	width:1500px;
+	}
+	.caption{height:100%; width:64%; margin-left: 21%;  margin-top:-1%;}	
+	#table{height:100%; width:64%; margin-left: 21%; }
+	.contant{margin-top:-2.35%; margin-left:21%; }
+	.menu2{margin-top:-5%;}
+	.HeaderNFL1{margin-top:0.8%; }
+	.Background1{margin-top:-2.1%; width:64%;}
+	.HeaderPATRIOTS1{margin-top:0%; margin-left:5%;}
+	
+
+	
+}
+
+@media screen and (max-width:1400px){
+	#Storbox1{
+	
+	width:1400px;
+	}
+	.caption{height:100%; width:68.55%; margin-left: 17%;  margin-top:-1%;}	
+	#table{height:100%; width:68.55%; margin-left: 17%; }
+	.contant{margin-top:-3.6%; margin-left:17%; }
+	.menu2{margin-top:-6.5%;}
+	.Background1 {width:68.6%; margin-left:17%; }
+	.HeaderNFL1{margin-top:1.2%; }
+	.HeaderPATRIOTS1{margin-top:2%; margin-left:5%;}
+	
+	
+}
+@media screen and (max-width:1300px){
+	#Storbox1{
+	
+	width:1300px;
+	}
+	.caption{height:100%; width:73.85%; margin-left: 13%;  margin-top:-1%;}	
+	#table{height:100%; width:73.85%; margin-left: 13%; }
+	.contant{margin-top:-4.1%; margin-left:13%; }
+	.menu2{margin-top:-8%;}
+	.Background1 {width:73.85%; margin-left:13%; margin-top:-2.3%;}
+	.HeaderNFL1{margin-top:1%; }
+	.HeaderPATRIOTS1{margin-top:2.5%; margin-left:5%;}
+		
+}
+
+
+
+@media screen and (max-width:1200px){
+	#Storbox1{
+	
+	width:1200px;
+	}
+	.caption{height:100%; width:80%; margin-left: 10%;  margin-top:-1%;}	
+	#table{height:100%; width:80%; margin-left: 10%; }
+	.contant{margin-top:-4.15%; margin-left:10%; }
+	.menu2{margin-top:-8%;}
+	.Background1 {width:80%; margin-left:10%; margin-top:-2.4%;}
+	.HeaderNFL1{margin-top:1%; }
+	.HeaderPATRIOTS1{margin-top:2.5%; margin-left:5%;}
+	
+}
+
+@media screen and (max-width:1100px){
+	#Storbox1{
+	
+	width:1100px;
+	}
+	.caption{height:100%; width:87.3%; margin-left: 5%;  margin-top:-1%;}	
+	#table{height:100%; width:87.3%; margin-left: 5%; }
+	.contant{margin-top:-3.7%; margin-left:5%; }
+	.menu2{margin-top:-8%;}
+	.Background1 {width:87.3%; margin-left:5%; margin-top:-2.5%;}
+	.HeaderNFL1{margin-top:1%; }
+	.HeaderPATRIOTS1{margin-top:2%; margin-left:6.5%;}
+	.HeaderPATRIOTS1 img{width:15%;}
+}
+
+@media screen and (max-width:1000px){
+	#Storbox1{
+	
+	width:1000px;
+	}
+	.caption{height:100%; width:96%; margin-left: 1%;  margin-top:-1%;}	
+	#table{height:100%; width:96%; margin-left: 1%; }
+	.contant{margin-top:-4.3%; margin-left:1%; }
+	.menu2{margin-top:-8%;}
+	.Background1 {width:96%; margin-left:1%; margin-top:-2.7%;}
+	.HeaderNFL1{margin-top:1%; }
+	.HeaderPATRIOTS1{margin-top:2.5%; margin-left:6.5%;}
+
+}
+
+
+@media screen and (max-width:900px){
+	#Storbox1{
+	
+	width:900px;
+	}
+
+	.caption{height:100%; width:96%; margin-left: 2%;  margin-top:7%;}	
+	#table{height:100%; width:96%; margin-left: 2%; }
+	.contant{display:none; }
+	.menu2{margin-top:-9%;}
+	.Background1 {width:85%; margin-left:5.5%; margin-top:5%; }
+	.HeaderNFL1{margin-top:1.8%; }
+	.HeaderNFL1 img{width:11%;}
+	.HeaderPATRIOTS1{margin-top:2.5%; margin-left:7%;}
+	.HeaderPATRIOTS1 img{width:17%;}
+}
+
+
+@media screen and (max-width:800px){
+	#Storbox1{
+	
+	width:800px;
+	}
+	
+
+	.caption{height:100%; width:96%; margin-left: 2%;  margin-top:7%;}	
+	#table{height:100%; width:96%; margin-left: 2%; }
+	.contant{display:none; }
+	.menu2{margin-top:-12%;}
+	.Background1 {width:85%; margin-left:5.5%; margin-top:5%; }
+	.HeaderNFL1{margin-top:1.8%; }
+	.HeaderNFL1 img{width:11%;}
+	.HeaderPATRIOTS1{margin-top:4%; margin-left:8%;}
+	.HeaderPATRIOTS1 img{width:17%;}
+}
+
+@media screen and (max-width:700px){
+	#Storbox1{
+	
+	width:700px;
+	}
+	
+	.caption{height:5%; width:99.7%; margin-left: 2%;  margin-top:17.3%; position:absolute;}	
+	#table{height:100%; width:96%; margin-left: 2%; }
+	.contant{display:none; }
+	.menu2{margin-top:-13%;}
+	.HeaderNFL1 img{width:12%;}
+	.Background1 {width:87.3%; margin-left:5%; margin-top:5%;}
+	.HeaderNFL1{margin-top:1.8%; }
+	.HeaderPATRIOTS1{margin-top:2.5%; margin-left:9.5%;}
+	
+}
+@media screen and (max-width:600px){
+	#Storbox1{
+	
+	width:600px;
+	}
+	
+	.caption{height:5%; width:101%; margin-left: 2%;  margin-top:23.5%; position:absolute;}	
+	#table{height:100%; width:96%; margin-left: 2%; }
+	
+	.contant{display:none; }
+	.menu2{margin-top:-15%;}
+	.Background1 {width:87.3%; margin-left:4%; margin-top:5%;}
+	.HeaderNFL1{margin-top:1.8%; }
+	.HeaderNFL1 img{width:12%;}
+	.HeaderPATRIOTS1{margin-top:5.5%; margin-left:11%;}
+}
+
+@media screen and (max-width:500px){
+	#Storbox1{
+	
+	width:500px;
+	}
+	
+.caption{height:5%; width:101.3%; margin-left: 2%;  margin-top:27%; position:absolute;}	
+	#table{height:100%; width:96%; margin-left: 2%; }
+	
+.contant{display:none; }
+	.menu2{margin-top:-18%;}
+	.Background1 {width:87.3%; margin-left:4%; margin-top:5%;}
+	.HeaderNFL1{margin-top:1.8%; }
+	.HeaderNFL1 img{width:15%;}
+	.HeaderPATRIOTS1{margin-top:5.5%; margin-left:12%;}
+	.HeaderPATRIOTS1 img{width:28%;}
+	
+}
+
+
+@media screen and (max-width:400px){
+	#Storbox1{
+	
+	width:400px;
+	}
+	
+	.caption{height:5%; width:103.7%; margin-left: 2%;  margin-top:36.6%; position:absolute;}	
+	#table{height:100%; width:96%; margin-left: 2%; }
+	
+.contant{display:none; }
+	.menu2{margin-top:-24%;}
+	.Background1 {width:87.3%; margin-left:4%; margin-top:5%;}
+	.HeaderNFL1{margin-top:1.8%; margin-left:-7%; }
+	.HeaderNFL1 img{width:15%;}
+	.HeaderPATRIOTS1{margin-top:9%; margin-left:15%;}
+	.HeaderPATRIOTS1 img{width:28%;}
+
+}
+
+/* Menyn försvinner då den lägger sig konstigt */
+
+
+@media screen and (max-width: 1500px){
+	.menu{ display:none;}
+	
+	
+}
+
+@media screen and (min-width:1500px){
+	.menu2{display:none;}
+}
+
+@media screen and (min-width:900px){
+	.Enbild{display:none;}
+}
+
+
+
+/*Telefonupplösningar */
+
+/* Telefon lägger sig på sidan */
+@media screen and (max-width:700px) and (max-height:450px){
+	#Storbox1{
+	
+	width:700px;
+	}
+	
+	.caption{height:16%; width:101%; margin-left: 2%;  margin-top:18.5%; position:absolute;}	
+	#table{height:100%; width:96%; margin-left: 2%; }
+	.contant{display:none; }
+	.menu2{margin-top:-12%;}
+	.Background1 {width:87.3%; margin-left:4%; margin-top:5%;}
+	.HeaderNFL1{margin-top:3%; margin-left:-7%; }
+	.HeaderNFL1 img{width:10%; height:25%;}
+	.HeaderPATRIOTS1{margin-top:4%; margin-left:9.5%;}
+	.HeaderPATRIOTS1 img{width:20%;}
+	
+	
+	
+}
+
+/* Telefon vanlig */
+@media screen and (max-width:450px) and (max-height:700px){
+	#Storbox1{
+	
+	width:700px;
+	}
+	
+	.caption{height:10%; width:161%; margin-left: 3.5%;  margin-top:29%; position:absolute;}	
+	#table{height:100%; width:96%; margin-left: 2%; }
+	
+    .contant{display:none; }
+	.menu2{margin-top:-20%;}
+	.Background1 {width:87.3%; margin-left:4%; margin-top:5%;}
+	.HeaderNFL1{margin-top:4.5%; margin-left:37%; }
+	.HeaderNFL1 img{width:10%; height:12%;}
+	.HeaderPATRIOTS1{margin-top:4%; margin-left:9%;}
+	.HeaderPATRIOTS1 img{width:30%;}
+	
+	
+}
+
+
+/* Iphone 6 lägger sig på sidan */
+@media screen and (max-width:667px) and (max-height:375px){
+	#Storbox1{
+	
+	width:667px;
+	}
+	
+	.caption{height:15%; width:90%; margin-left: 5%;  margin-top:22%; position:absolute;}	
+	#table{height:100%; width:85.3%; margin-left: 5%;  }
+	.contant{display:none; }
+	.menu2{margin-top:-15%;}
+	.Background1 {width:87.3%; margin-left:4%; margin-top:5%;}
+	.HeaderNFL1{margin-top:7.5%; margin-left:-2%; }
+	.HeaderNFL1 img{width:15%; height:20%;}
+	.HeaderPATRIOTS1{margin-top:-3%; margin-left:9%;}
+	.HeaderPATRIOTS1 img{width:20%;}
+	
+}
+
+/* Iphone 6 i vanligt läge */
+@media screen and (max-width:375px) and (max-height:667px){
+	#Storbox1{
+	
+	width:375px;
+	}
+	
+	.caption{height:8%; width:93.5%; margin-left: 5.5%;  margin-top:41%; position:absolute;}	
+	#table{height:100%; width:85.3%; margin-left: 5%;  }
+.contant{display:none; }
+	.menu2{margin-top:-27%;}
+	.Background1 {width:87.3%; margin-left:8%; margin-top:5%;}
+	.HeaderNFL1{margin-top:5%; margin-left:-2%; }
+	.HeaderNFL1 img{width:15%; height:15%;}
+	.HeaderPATRIOTS1{margin-top:10%; margin-left:17%;}
+	.HeaderPATRIOTS1 img{width:35%;}
+}
+
+/* Mobilanpassning för seasons */
+@media screen and (max-width:1400px){
+	.MostPromising1MOVE img{
+		
+		margin-left:30%;
+	}
+}
+
+@media screen and (max-width:1500px){
+	.MostPromising1MOVE1 img{
+		
+		margin-left:30%;
+	}
+}
+
+
+@media screen and (max-width:1920px){
+	#Storbox2{
+	width:1920px;
+	
+	}
+	.HeaderNFL2{}
+	#container{margin-top:1.4%;  }
+	.HeaderPATRIOTS2{}
+#meny2{margin-left:5%;}
+	.menu{margin-left:23%;}
+	
+	
+}
+@media screen and (max-width:1910px){
+	#Storbox2{
+	
+	width:1910px;
+	}
+	.HeaderNFL2{margin-top:-0.15%}
+	.HeaderPATRIOTS2{margin-top:0.5%;}
+	.Background2{margin-top:-3.5%;}
+	#container{margin-top:1%;}
+	
+	
+}
+
+@media screen and (max-width:1800px){
+	#Storbox2{
+	
+	width:1800px;
+	}
+	.Schema{margin-top:-0.1%;}
+	.Schema img{margin-top:-4.8%;}
+	.Resultat{margin-top:-0.1%;}
+	.Resultat img{margin-top:-5%;}
+	.menu{margin-top:-4.5%; margin-left:25%;}
+	#container{margin-top:2.5%;}
+	
+	
+}
+
+@media screen and (max-width:1700px){
+	#Storbox2{
+	
+	width:1700px;
+
+	}
+	.Schema{margin-top:-0.3%;}
+	.Schema img{margin-top:-5%;}
+	.Resultat{margin-top:-0.4%;}
+	.Resultat img{margin-top:-5.3%;}
+	.HeaderPATRIOTS2{margin-top:1%;}
+	.HeaderNFL2{margin-top:-0.3%;}
+	.menu{margin-left:22%;}
+	#container{margin-top:1.5%;}
+	
+	
+	
+}
+
+
+@media screen and (max-width:1600px){
+	#Storbox2{
+	
+	width:1600px;
+
+	}
+	.Schema{margin-top:-0.35%;}
+	.Schema img{margin-top:-5.3%;}
+	.Resultat{margin-top:-0.9%;}
+	.Resultat img{margin-top:-5.8%;}
+	.HeaderNFL2{margin-top:-0.8%; margin-left:3%;}
+	.menu{margin-top:-5.5%; margin-left:16%;}
+	#container{margin-top:2.5%;}
+	
+}
+
+
+@media screen and (max-width:1500px){
+	#Storbox2{
+	
+	width:1500px;
+
+	
+	}
+	.Schema{margin-top:-0.6%;}
+	.Schema img{margin-top:-5.7%;}
+	.Resultat{margin-top:-1.2%;}
+	.Resultat img{margin-top:-5.8%;}
+    .HeaderNFL2{margin-top:-0.8%;}
+	.HeaderPATRIOTS2{margin-top:1%;}
+	.mobile-menu{margin-top:-10%;}
+	#container{margin-top:2.7%;}
+	
+	
+}
+
+@media screen and (max-width:1400px){
+	#Storbox2{
+	
+	width:1400px;
+
+	}
+	.MostPromising{ text-align:center;}
+	.MostPromising img{margin-left:0%;}
+	.Schema{margin-top:-0.7%;}
+	.Schema img{margin-top:-6%;}
+	.Resultat{margin-top:-1.5%;}
+	.Resultat img{margin-top:-6.5%;}
+	.menu1{margin-top:-6.2%;}
+    .HeaderNFL2{margin-top:-1.3%; }
+	.HeaderPATRIOTS2{margin-top:3%; margin-left:5%;}
+	#container{margin-top:2%; }
+	
+}
+@media screen and (max-width:1300px){
+	#Storbox2{
+	
+	width:1300px;
+	
+	}
+	
+	.Schema{margin-top:-0.9%;}
+	.Schema img{margin-top:-6.9%;}
+	.Resultat{margin-top:-2%;}
+	.Resultat img{margin-top:-6.9%;}
+	.menu1{margin-top:-6.2%;}
+    .HeaderNFL2{margin-top:-1.7%;}
+	.HeaderPATRIOTS2{}
+	#container{margin-top:4%;}
+	
+}
+
+@media screen and (max-width:1200px){
+	#Storbox2{
+	
+	width:1200px;
+	
+	}
+    .Schema{margin-top:-1.1%;}
+	.Schema img{margin-top:-7.2%;}
+	.Resultat{margin-top:-2.6%;}
+	.Resultat img{margin-top:-7.2%;}
+	.HeaderNFL2{margin-top:-2.5%;}
+	.HeaderPATRIOTS2{margin-top:4%; margin-left:6%;}
+	#container{margin-top:2.5%;}
+	
+}
+
+@media screen and (max-width:1100px){
+	#Storbox2{
+	
+	width:1100px;
+	
+	}
+	.menu1{margin-top:-8.3%;}
+	 .Schema{margin-top:-1.4%;}
+	.Schema img{margin-top:-8.2%;}
+	.Resultat{margin-top:-3.5%;}
+	.Resultat img{margin-top:-8%;}
+	.HeaderNFL2{margin-top:-3%;}
+	.HeaderPATRIOTS2{margin-top:6%; margin-left:6%;}
+	#container{margin-top:2.5%;}
+	
+}
+
+@media screen and (max-width:1000px){
+	#Storbox2{
+	
+	width:1000px;
+	
+	}
+	.menu1{margin-top:-8.3%;}
+	 .Schema{margin-top:-1.7%;}
+	.Schema img{margin-top:-8.6%;}
+	.Resultat{margin-top:-4.3%;}
+	.Resultat img{margin-top:-9%;}
+	.HeaderNFL2{margin-top:-3.6%;}
+	.HeaderPATRIOTS2{margin-top:6%; margin-left:6%;}
+	#container{margin-top:2.5%;}
+	
+}
+
+
+@media screen and (max-width:900px){
+	#Storbox2{
+	
+	width:900px;
+
+	}
+	
+	.menu1{margin-top:-10%; margin-left:-2%;}
+	 .Schema{margin-top:-2.2%;}
+	.Schema img{margin-top:-9.5%;}
+	.Resultat{margin-top:-5.1%;}
+	.Resultat img{margin-top:-9.9%;}
+	.HeaderNFL2{margin-top:-4.5%;}
+	.HeaderPATRIOTS2{margin-top:8%; margin-left:7%;}
+	.HeaderPATRIOTS2 img{width:13%;}
+	#container{margin-top:2.5%;}
+	
+	
+	
+}
+
+@media screen and (max-width:800px){
+	#Storbox2{
+	
+	width:800px;
+	
+	}
+	.menu1{margin-top:-10.5%; margin-left:-2%;}
+	 .Schema{margin-top:-2.6%;}
+	.Schema img{margin-top:-11.2%;}
+	.Resultat{margin-top:-6.2%;}
+	.Resultat img{margin-top:-11%;}
+	.HeaderNFL2{margin-top:-6%;}
+	.HeaderPATRIOTS2{margin-top:8%; margin-left:7%;}
+	.HeaderPATRIOTS2 img{width:13%;}
+	#container{margin-top:3.3%;}
+	
+}
+
+@media screen and (max-width:700px){
+	#Storbox2{
+	
+	width:700px;
+	}
+	.menu1{margin-top:-13.8%; margin-left:-2%;}
+	 .Schema{margin-top:-3.3%;}
+	.Schema img{margin-top:-12.9%;}
+	.Resultat{margin-top:-8%;}
+	.Resultat img{margin-top:-13%;}
+	.HeaderNFL2{margin-top:-7.5%;}
+	.HeaderPATRIOTS2{margin-top:13%; margin-left:7%;}
+	.HeaderPATRIOTS2 img{width:17%;}
+	#container{margin-top:4%;}
+	
+}
+@media screen and (max-width:600px){
+	#Storbox2{
+	
+	width:600px;
+	}
+	.menu1{margin-top:-14.5%; margin-left:-2%;}
+	 .Schema{margin-top:-4%;}
+	.Schema img{margin-top:-14.9%;}
+	.Resultat{margin-top:-10%;}
+	.Resultat img{margin-top:-15%;}
+	.HeaderNFL2{margin-top:-10%;}
+	.HeaderPATRIOTS2{margin-top:15%; margin-left:10%;}
+	.HeaderPATRIOTS2 img{width:17%;}
+	#container{margin-top:4%;}
+	
+}
+
+@media screen and (max-width:500px){
+	#Storbox2{
+	
+	width:500px;
+	}
+	.menu1{margin-top:-18.5%; margin-left:-2%;}
+	 .Schema{margin-top:-5.4%;}
+	.Schema img{margin-top:-17.5%;}
+	.Resultat{margin-top:-13%;}
+	.Resultat img{margin-top:-19%;}
+	.HeaderNFL2{margin-top:-13%;}
+	.HeaderPATRIOTS2{margin-top:20%; margin-left:12%;}
+	.HeaderPATRIOTS2 img{width:21%;}
+	#container{margin-top:4%;}
+	
+}
+
+
+
+
+/*Telefonupplösningar */
+
+/* Telefon lägger sig på sidan */
+@media screen and (max-width:700px) and (max-height:450px){
+	#Storbox2{
+	
+	width:700px;
+	}
+	
+	.menu1{margin-top:-13.7%; margin-left:-1%;}
+	.HeaderNFL2 {margin-top:-0.5%; margin-left:-1%;}
+	.PatriotsFramförGIF{margin-top:1.4%;}
+	.HeaderPATRIOTS2{ margin-top:-0.5%; margin-left:8%; }
+	.menu-list{font-size:9px;}
+	.Huvudmeny2{height:55%;}
+	
+	
+}
+
+/* Telefon vanlig */
+@media screen and (max-width:450px) and (max-height:700px){
+	#Storbox2{
+	
+	width:700px;
+	}
+	
+	.menu1{margin-top:-24%; margin-left:-1%;}
+	.HeaderNFL2 {margin-top:1.3%; margin-left:-1%;}
+	.PatriotsFramförGIF{margin-top:-4.2%;}
+	.HeaderPATRIOTS2{ margin-top:3%; margin-left:6%; }
+	.menu-list{font-size:9px;}
+	.Huvudmeny2{height:35%; margin-top:0%;}
+	
+	
+}
+
+
+/* Iphone 6 lägger sig på sidan */
+@media screen and (max-width:667px) and (max-height:375px){
+	#Storbox2{
+	
+	width:667px;
+	}
+	
+	.menu1{margin-top:-15%; margin-left:-4%;}
+	.Schema{margin-top:-3.5%;}
+	.Schema img{margin-top:-15%;}
+	.Resultat{margin-top:-10%;}
+	.Resultat img{margin-top:-13.5%;}
+	.HeaderNFL2{margin-top:-5%; margin-left:-5%;}
+	.HeaderNFL2 img{width:15%; height:25%;}
+	.HeaderPATRIOTS2{margin-top:10%; margin-left:12%;}
+	.HeaderPATRIOTS2 img{width:21%;}
+	.Huvudmeny2{
+	width:105%;
+	height:70px;
+	background-color:#0D254C;
+	
+}
+	#container{margin-top:3%;}
+	
+}
+
+/* Iphone 6 i vanligt läge */
+@media screen and (max-width:375px) and (max-height:667px){
+	#Storbox2{
+	
+	width:375px;
+	}
+	
+	.menu1{margin-top:-32.8%; margin-left:-4%;}
+	.Schema{margin-top:-7.7%;}
+	.Schema img{margin-top:-24%;}
+	.Resultat{margin-top:-20%;}
+	.Resultat img{margin-top:-23%;}
+	.HeaderNFL2{margin-top:-10%; margin-left:-5%;}
+	.HeaderNFL2 img{width:15%;}
+	.HeaderPATRIOTS2{margin-top:26%; margin-left:12%;}
+	.HeaderPATRIOTS2 img{width:21%;}
+	.Huvudmeny2{
+	width:105%;
+	height:70px;
+	background-color:#0D254C;
+	
+}
+	#container{margin-top:8%;}
+	
+	
+}
+		 /* En jävla massor kod */
