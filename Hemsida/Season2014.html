@@ -1,0 +1,461 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+<link href="Index.css" rel="stylesheet" type="text/css">
+<meta charset="utf-8">
+<title>Patriots TM Season League 2015</title>
+</head>
+<body>
+<div id="Storbox2">
+
+<header>
+    
+   <div class="Huvudmeny2">
+         </div>
+                  
+       		<div class="HeaderNFL">
+         		 <img src="Super_Bowl_LI_logo.svg.png" alt="En bild">
+            		 </div>
+                     
+                     	<div class="HeaderPATRIOTS">
+                       	  <img src="patriotsLogo.png" alt="En bild">
+                        	 </div>		
+                             
+                             
+                                           <div class="Flytta">               
+                                     
+                                     <ul class="menu cf">
+  <li>
+  <a href="">Player of the month</a>
+   	<ul class="submenu2">
+              <li><a href="PlayerOfTheMonthSeptember.html">September 2016</a></li>
+      <li><a href="PlayerOfTheMonthOctober.html">October 2016</a></li>
+      <li><a href="PlayerOfTheMonthNovember.html">November 2016</a></li>
+      <li><a href="PlayerOfTheMonthDecember.html">December 2016</a></li>
+   	 </ul>			
+  	</li>
+  
+  <li>
+    <a href="HallOfFame.html">Hall Of Fame</a>
+   		  
+   	
+              			
+  	</li>
+    
+    <li>
+  			<a href="">Seasons</a>
+  			<ul class="submenu2">
+      			<li><a href="Season2016.html" >Season 2016</a></li>
+     			 <li><a href="Season2015.html">Season 2015</a></li>
+     			 <li><a href="Season2013.html">Season 2013</a></li>
+      			
+   		   </ul>	
+    </li>
+     
+   		 		
+ 
+ 		 <li><a href="Roster.html">Patriots Roster</a></li>
+  		 <li><a href="Index.html">Homepage</a></li>
+  		 <li>
+  			<a href="">Social Media</a>
+  			<ul class="submenu1">
+      			<li><a href="https://www.facebook.com/newenglandpatriots" >Facebook</a></li>
+     			 <li><a href="https://twitter.com/patriots">Twitter</a></li>
+     			 <li><a href="https://www.instagram.com/patriots">Instagram</a></li>
+      				<li><a href="https://www.youtube.com/channel/UCMm_V8YjmnZRhToXIqDYDuw">Youtube</a></li>
+   		   </ul>	
+    </li>		
+</ul>
+</div>
+ <!--Meny, inklusive de bilder som ligger i headern, etc-->
+	</header>
+    
+    	    <nav>
+             <!-- Det är okej att ha detta även om valideringen klagar på detta, enligt dig (2017-05-11 15:34)-->
+<input type="checkbox" id="clicker">
+<div class="menu3">
+  <label for="clicker" class="hamburger">
+    <div class="bar" id="bar1">
+    </div>
+    <div class="bar" id="bar2">
+    </div>
+    <div class="bar" id="bar3">
+    </div>
+     <!-- Det är okej att ha detta även om valideringen klagar på detta, enligt dig (2017-05-11 15:34)-->
+    
+    
+  </label>
+  <div class="menu-list">
+    <ul>
+       <li><a id="item2" href="Index.html">Home</a></li>
+      <li><a id="item3" href="Season2016.html">Season 2016</a></li>
+      <li><a id="item4" href="Season2015.html">Season 2015</a></li>
+      <li><a id="item7" href="Season2013.html">Season 2013</a></li>
+     <li><a id="item8" href="PlayerOfTheMonthSeptember.html">POTM September 2016</a></li>
+      <li><a id="item9" href="PlayerOfTheMonthOctober.html">POTM October 2016</a></li>
+      <li><a id="item10" href="PlayerOfTheMonthNovember.html">POTM November 2016</a></li>
+      <li><a id="item11" href="PlayerOfTheMonthDecember.html">POTM December 2016</a></li>
+      <li><a id="item12" href="HallOfFame.html">Hall of Fame</a></li>
+        <li><a id="item13" href="Roster.html">Roster</a></li>
+    </ul>
+  </div>
+</div>
+
+
+</nav>
+<!--Mobilsmeny, eller menyn som kommer fram då upplösningen är mindre än en bestämd pixel-->
+
+         
+        	    <aside>
+            <div id="container">
+       <div id="days"></div>
+       <div id="hours"></div>
+       <div id="minutes"></div>
+       <div id="seconds"></div>
+       <div id="footer"> 
+         Days until 2017 NFL Playoff
+       </div>      
+    </div><!--Klocka-->
+                     <script>
+        /***************************************
+        
+        DECLARE VARIABLES FOR DATE
+        
+        ***************************************/
+        
+        var today = new Date();
+        var debut = new Date('Sep 7, 2017');
+        var difference = debut.getTime() - today.getTime();
+        
+        var totalSeconds = difference / 1000;
+        var days = Math.floor(totalSeconds / 86400);
+        var hours = Math.ceil((totalSeconds % 86400) / 3600);
+        var minutes = Math.floor((totalSeconds % 3600) / 60);
+        var seconds = Math.floor((totalSeconds % 3600) % 60);
+        
+        var daysValue;
+        var hoursValue;
+        var minutesValue;
+        var secondsValue;
+        
+        /***************************************
+        
+        FUNCTION TO PAD NUMBERS
+        
+        ***************************************/
+        
+        function pad2(number) {
+             return (number < 10 ? '0' : '') + number   
+        }
+        
+        /***************************************
+        
+        FUNCTION TO WRITE NUMBERS TO CLOCK
+        
+        ***************************************/
+        
+        function displayTime() {
+            
+            var daysDiv = document.getElementById('days');
+            var daysContent = daysDiv.innerHTML;
+            daysDiv.innerHTML = days;
+            
+            var hoursDiv = document.getElementById('hours');
+            var hoursContent = hoursDiv.innerHTML;
+            hoursDiv.innerHTML = pad2(hours);
+            
+            var minutesDiv = document.getElementById('minutes');
+            var minutesContent = minutesDiv.innerHTML;
+            minutesDiv.innerHTML = pad2(minutes);
+            
+            var secondsDiv = document.getElementById('seconds');
+            var secondsContent = secondsDiv.innerHTML;
+            secondsDiv.innerHTML = pad2(seconds);
+        }
+        
+        displayTime();
+        
+        /***************************************
+        
+        FUNCTION TO COUNTDOWN DAYS
+        
+        ***************************************/
+        
+        function timerDays() {
+            
+            /* Code for this section under construction */
+        }
+        
+        /***************************************
+        
+        FUNCTION TO COUNTDOWN HOURS
+        
+        ***************************************/
+        
+        function timerHours() {
+            hoursValue = setInterval(function(){
+                if (hours < 0) {
+                    hours = hours + 24;
+                    days = days - 1;
+                    displayTime();
+                }
+                else if (hours == 24) {
+                    hours = 0;
+                    displayTime();
+                }
+                else {
+                    hours = hours;
+                    displayTime();
+                }
+            }, 100);
+        }
+        
+        /***************************************
+        
+        FUNCTION TO COUNTDOWN MINUTES
+        
+        ***************************************/
+        
+        function timerMinutes() {
+            minutesValue = setInterval(function(){
+                if (minutes < 0) {
+                    minutes = minutes + 60;
+                    hours = hours - 1;
+                    displayTime();
+                }
+                else {
+                    minutes = minutes;
+                    displayTime();
+                }
+            }, 100);
+        }
+        
+        /***************************************
+        
+        FUNCTION TO COUNTDOWN SECONDS
+        
+        ***************************************/
+        
+        function timerSeconds() {
+            secondsValue = setInterval(function(){
+                if (seconds > 0) {
+                    seconds = seconds - 1;
+                    displayTime();
+                }
+                else if (seconds <= 0) {
+                    seconds = seconds + 59;
+                    minutes = minutes - 1;
+                    displayTime();
+                }
+                else {
+                }
+            }, 1000);
+        }
+        
+        /***************************************
+        
+        CALL ALL COUNTDOWN FUNCTIONS
+        
+        ***************************************/
+        
+        timerSeconds();
+        timerMinutes();
+        timerHours();
+        </script>  <!--Skript som innefattar klockans funktion, etc-->
+    
+    
+            </aside>
+            
+            <article>
+            
+        
+         			   <div class="Background2">
+            
+                            <div class="Schema">
+                            <div class="Schedule">
+                            <p>Schedule</p>
+                            </div>
+                                <img src="season2014.jpg" alt="En bild">
+                                
+                                <div class="Resultat">
+                                <div class="Results">
+                                <p> Results </p>
+                                </div>
+                                
+                                 <img src="2014Schema.jpg" alt="En bild">
+                                   </div>
+                                          
+                              </div>
+                                
+                                    
+                                    <h5>
+                                   DRAFT PICKS</h5>
+<h3>Round 1, Pick 29 (29): Dominique Easley, DT, Florida. </h3>
+
+<p>Former Florida Gator Dominique Easley was dubbed "the scariest man in college football" by Lost Lettermen.</p>
+
+<p>From the chains Easley draped around his neck during pregame to the Chucky doll he carried around with him practically everywhere, there are plenty of reasons to be intimidated by Easley. And that's not even mentioning his 288-pound sculpted frame.
+
+
+“People might mistake Dominique for being this tough, grimy person from the way he plays football. You see these pictures with this angry face on. That’s completely different from how he is off the field. He may try to put up a front,” Juan Easley, Dominique’s uncle, said, according to Tyler Jett of the Independent Florida Alligator.
+
+At an SEC media day Easley admitted to not watching much football and being more of a cartoon guy, SpongeBob to be specific.
+
+He is also known for his dancing on the sidelines. </p>
+
+<p>“I just have fun," Easley said, according to Rachel George of The Orlando Sentinel. "I just try to keep dancing, have fun." </p>
+
+<p>When Easley was younger, he was bowlegged and had to wear braces. Per George, Dominique’s father, David Easley, said, “Even with the braces, he was still non-stop moving."</p>
+
+<p>Easley didn’t have an easy childhood, however. Adam Pincus of the Alligator wrote:
+
+He had to stay active. Headaches from staying inside forced Easley to the outdoors. Video games never interested him. He wanted to see the world. Moving was also not a choice. He moved eight times with his family. He remembers the McDonald’s housing projects and moving to his grandma’s house when they got evicted and the place on Sherman Street.
+“When I was a kid, I used to always take the bus and walk everywhere. I would see a whole lot of homeless kids,” Easley said, via Pincus. “Not even adults, but kids. A lot of my friends didn’t grow up off of anything.”</p>
+
+<p>He eventually became the highest-ranked football prospect in New York and the No. 12 prospect in all of the country, according to Scout.com</p>
+
+<p>Easley’s father was overseas in the military while he was in middle school and high school. Shalise Manza Young of The Boston Globe quoted Easley as saying, “Well, that really helped me as a man. There’s no excuse for nothing because they were put in situations that were life or death. So the life that we’re living now is much easier than the life that they had to live [in combat].”
+
+When Easley made it to college things did not get too much easier for him. Between 2011 and 2013, he sustained a torn anterior cruciate ligament and medial meniscus in his right knee and another torn ACL in his left.
+
+Despite these restrictions, he displayed enough potential at Florida to be selected in the first round of the NFL draft by the Patriots.
+
+"I’ve been watching the Patriots for a long time," Easley said in a conference call with the media, via Patriots.com. "I’m pretty sure you guys know some players from Staten Island played there and then Coach Urban Meyer had a lot of players go to the Patriots. It’s a winning team so I’m real excited."
+</p> 
+
+<h3>Round 2, Pick 30 (62): Jimmy Garoppolo, QB, Eastern Illinois</h3>
+
+<p>The 2010 2-star quarterback recruit out of Rolling Meadows High School is now a second-round NFL draft pick out of Eastern Illinois.
+
+That 2-star ranking was actually the best I could find for Jimmy Garoppolo, the heir apparent to Tom Brady in New England.</p>
+
+<p>Out of high school, ESPN.com had Garoppolo unranked in the nation, unranked at his position and even unranked in his state. There was no player news, and the only recruiting info available in his ESPN profile was that he signed his offer from Eastern Illinois. </p>
+<p>His college profile on ESPN.com (subscription required) paints a much different picture. Garoppolo was the fourth-highest-rated quarterback in the 2014 NFL draft class, in the top 50 players in the country and was listed as having exceptional intangibles and durability.</p>
+<p>In college, Garoppolo established himself as the most accomplished quarterback in Eastern Illinois history.  He holds the records for both the most and second-most touchdown passes in a single game. Other single-season records he holds include the most touchdown passes, most completions and most passing yards. Career records include the same three categories.</p>
+<p>The players listed right behind him in those record book are often New Orleans Saints head coach Sean Payton or Dallas Cowboys quarterback Tony Romo.</p>
+<p>In high school, Garoppolo finished second in career passing touchdowns in his school's history. He also holds the second-place spot for single-season passing touchdowns.</p>
+<p>Scout.com had eight high school quarterbacks out of Illinois ranked in the top 150 prospects in the nation in 2010. Garoppolo was not one of them. Four years later, however, he is the only one in the NFL.</p>
+
+<h3>Round 4, Pick 5 (105): Bryan Stork, C, Florida State</h3>
+<p>Five years and 55 pounds after heading to Florida State as a freshman, the then-No. 26-ranked tight end has been drafted to the NFL by the Patriots as an interior offensive lineman.</p>
+<p>Center Bryan Stork from Vero Beach, Florida, was the Patriots' first selection on the third day of the draft.</p>
+<p>When asked in a conference call with the media, via Patriots.com, about changing positions, Stork responded, “It doesn’t matter. I’m just here to play ball. That’s all it is.”</p>
+<p>Before getting to high school, Stork's father, Larry Stork, began fighting colon cancer, according to Laurel Pfahler of Rivals.com. Unfortunately, he passed away at the age of 55, early in Stork’s senior year in high school.</p>
+<p>"It was tough, but at least he died knowing I was going to play for Florida State," said Stork. "He knew I was accomplishing my dream. He wanted to fight to stay alive so he could watch me on TV," Stork said. "He fought to the last second, but we told him it was OK to let go. I just had to cherish every moment I could. He was like my best friend."</p>
+<p>Stork’s father may have passed away, but his son is someone to be extremely proud of. He went on to win a national championship his final year in college and is now a New England Patriot.</p>
+
+ <h3>Round 4, Pick 30 (130): James White, RB, Wisconsin</h3>
+ <p>The Patriots lost running back Blount this offseason and needed to add depth at the position. Because of this, the team used its second fourth-round pick on running back James White.</p>
+<p>White is used to being a depth player. But he is also used to fighting to shine when he can for his team. In high school, he played for a national champion in St. Thomas Aquinas. While there, he took a backseat to current Cincinnati Bengals star running back Giovanni Bernard, who was in the same grade.</p>
+<p>In their junior years, Bernard was the feature back and picked up over 1,500 rushing yards. White failed to eclipse 1,000 yards on the ground, but he was a touchdown machine. Bernard scored 19 total touchdowns, while White scored 21.</p>
+<p>When it came to recruiting, Bernard received all of the spotlight. He ranked as the No. 16 running back in the country, according to ESPN, whereas White ranked No. 68.</p>
+<p>Unfortunately, not a whole lot changed for White in college. During his freshman year, he trailed in carries to both John Clay and Montee Ball. Despite having less carries than two other rushers, though, he still led the team in rushing yards with 1,052.</p>
+<p>His sophomore and junior years had a similar feel, with Ball taking control of the offense. Over those two years, Ball combined for over 60 touchdowns and had twice as many carries as White did.</p>
+<p>In 2013, Ball went on to the NFL and White had his chance to lead the team in carries. Unfortunately, running back Melvin Gordon hit the scene and stole the spotlight with less carries and more yards.</p>
+<p>Although White has been overshadowed, his production is undeniable. He ranked No. 4 all time at Wisconsin with 4,015 rushing yards and No. 3 all time in rushing touchdowns with 45.</p>
+
+
+<h3>Round 4, Pick 40 (140): Cameron Fleming, OT, Stanford</h3>
+<p>Regarding whether it’s harder to be a rocket scientist or be successful in the NFL, Fleming said, via Patriots.com: "I don’t think either one is harder than the other one. If I was going to go down that path then I’m going to give it my all. I’m going to try to be the best rocket scientist. I can’t be an astronaut, I’m too tall. I’m actually an inch too tall. But if I was going to go down that route I would have given it my all. Now I’m going down the NFL route and playing with the Patriots and I’m just going to give it my all. I don’t think there’s any one that’s more difficult" than the other.</p>
+<p>According to the Q&A, both of Fleming’s parents were in the military, and he lived near NASA growing up, which led to his decision on his major.</p>
+<p>At 6’5”, 235 pounds, Fleming is one of the best run-blockers in the draft and he uses his size to not allow defenders around him. After drafting a running back, the Patriots added some depth in their run protection.</p>
+
+<h3>Round 6, Pick 3 (179): Jon Halapio, OG, Florida</h3>
+<p>“It was very difficult, but I just love football. When you’re in the football game, you’re just filled with adrenaline at the time so you don’t really feel the pain that much,” Jon Halapio said, per Patriots.com, speaking of when he played with a torn pectoral muscle last July.</p>
+<p>According to Shalise Manza Young of The Boston Globe, Halapio has also played with a torn hamstring, chronic knee and back pain and a gauged eye that required stitching—after the game, of course.</p>
+<p>As team captain at the University of Florida both his junior and senior seasons, Halapio is a clear leader and one of the toughest players on the field at any given time. In a time when every injury in football is taken very seriously, it is nice to see an athlete who will fight through the pain.</p>
+<p>Halapio’s toughness has been well-documented before this as well. His high school scouting report from Scout.com lists his strengths as intensity, power and strength and toughness.</p>
+
+<h3>Round 6, Pick 22 (198): Zach Moore, DE, Concordia (MN)</h3>
+<p>Concordia is a Division II school. Zach Moore, however, is not a Division II-caliber prospect.</p>
+<p>While Moore was in high school, he was recruited by multiple Division I colleges. Unfortunately, he was deemed academically ineligible, according to Rich Campbell of The Chicago Tribune.</p>
+<p>Moore had to go to Concordia instead, but he does not regret it, telling Campbell, “I have no regrets. I met some great people, great coaches. I was able to get my academics on straight.”</p>
+<p>Moore now has a degree in criminal justice as well as an opportunity to play for the New England Patriots.</p>
+<p>At Concordia, Moore holds the school records for career quarterback sacks, yards from sacks, fumbles forced and quarterback hurries.</p>
+<p>“I’m an all-around pass rusher. I can get through quickness, power, anything,” he said, via Patriots.com, upon being drafted. “It just comes from me working on my technique and being technically sound, because eventually you’re going to have to rely on technique.”</p>
+<p>As far as feeling like an underdog being from Division II, it appears that Moore would take on that role no matter where he is from. Per Patriots.com, he said, “There’s always something to prove. Even if I wasn’t a Division II football player, I’d always have a chip on my shoulder and I’d always be a competitor.”</p>
+
+<h3>Round 6, Pick 30 (206): Jemea Thomas, CB, Georgia Tech</h3>
+<p>A guy who is 5’9” and under 200 pounds is the type of player you would want to get hit by if you have to get hit by anyone in the NFL, right? That’s not the case with Jemea Thomas.</p>
+<p>Thomas is one of the hardest-hitting rookies this season. He has deceptive strength, and his willingness to put a hit on anyone really separates him from smaller players. In an interview with Wes Durham of RamblinWreck.com in 2011, Thomas said, “Coming from Fitzgerald, we had won state in weightlifting a couple times in a row, so I came in already benching 315.”</p>
+<p>Thomas was an All-State defensive back in Georgia during high school. Rivals.com had him as the No. 70-ranked prospect.</p>
+<p>He gradually became more productive in college, and in his senior year he had 73 unassisted tackles.</p>
+<p>Now he is the newest piece in a revamped Patriots secondary.</p>
+<p>“At [Georgia] Tech I played it all,” Thomas said in a conference call, via Patriots.com. “I played every position in the secondary, so whatever they want me to come in and play that’s what I’m looking forward to doing.”
+
+When asked if he had a favorite position, he responded, “I love it all.”</p>
+
+<h3>Round 7, Pick 29 (244): Jeremy Gallon, WR, Michigan</h3>
+
+<p>After the selection of the 5’9”, 192-pound Jemea Thomas, it would have been easy to think that the Patriots could not go any smaller with their next pick, but they managed.</p>
+<p>At 5’7” and 185 pounds, Michigan receiver Jeremy Gallon becomes one of the smallest players on the team. This small seventh-round pick could make major contributions, though.</p>
+<p>In Gallon’s senior season as a Michigan Wolverine, he caught 89 passes for 1,373 yards.</p>
+<p>The road to his success has included far more than just football stats, however. His numbers in the classroom have been his biggest accomplishment.</p>
+<p>Michael Rothstein of ESPN.com discussed Gallon’s road to Michigan, noting that Gallon was the first person in his family to attend college, so it was important that he graduated.</p>
+<p>Gallon did not realize that college was even in the cards for him until his high school coach stressed it to him.</p>
+<p>During the recruiting process, Michigan offered him more than a football program.</p>
+<p>"[Michigan] would always come and talk to me about school," Gallon said, via Rothstein. The other schools would come and talk to me about football," Gallon said. "It was a big difference. I'm not just going to go to a school for football. I want to graduate from a college.”</p>
+<p>Schooling was always hard for Gallon. He never did great on testing or held a GPA over 3.0, but he worked hard to pass and be eligible to continue to play football, which has now provided him with an opportunity in the NFL.</p>
+<p>As the Patriots' final selection in the 2014 NFL draft, there is another Michigan-man who Gallon can relate to, according to Patriots.com: "I know [Tom Brady] struggled a little bit and I know with the draft he was waiting too. When he got that chance and when he got his name called he made the best of it. For me, being in the same situation, I want to follow in his footsteps to be one of the greatest to play the game."</p>
+
+<div class="MostPromising">
+<h5>Most promising draft pick of 2014</h5>
+<img src="3MostPromisingDraft.png" alt="En bild">
+</div>
+
+
+								<h5>SEASON</h5>
+<p>The 2014 New England Patriots season was the franchise's 45th season in the National Football league, the 55th overall and the 15th under head coach Bill Belichick.</p>
+
+<p>The Patriots finished 12–4 for the third straight year, winning their sixth straight AFC East title, as well as the top-overall seed and home field advantage for the AFC playoffs. With their seeding, New England was awarded a first-round bye in the playoffs for the fifth season in a row, the first such occurrence for any team since the league switched to a 12-team playoff format in 1990 (surpassing the 1992–95 Dallas Cowboys). They finished fourth in the NFL in scoring (468 points) and eighth in points allowed (313), and first in point differential (with an average margin of victory of 9.7 points).</p>
+
+<p>The Patriots defeated the Baltimore Ravens 35–31 in the Divisional Round of the playoffs, advancing to their fourth straight AFC Championship game. There, they defeated the Indianapolis Colts 45–7 to advance to their 8th Super Bowl and 6th under Bill Belichick. On February 1, 2015, the Patriots played the Seattle Seahawks in Super Bowl XLIX. After tying the game 14–14 at halftime and falling behind ten points in the third quarter, the Patriots rallied in the final quarter of the game to secure a 28–24 lead. The win secured their fourth championship in franchise history.</p>
+
+
+                            </div>
+                            
+                     
+                            </article>
+                 
+                 <div class="Square">
+                 
+            
+   
+  	<div class="Highlights">
+     <h4>Highlights from the 2014 NFL draft</h4> 
+     <br>
+       <img src="3Draft6.png" alt="Bild från draften">
+     <br>
+    <img src="3Draft1.jpg" alt="Bild från draften">
+    
+     <br>
+     <img src="3DRAFT2.jpg" alt="Bild från draften">
+     <br>
+    <img src="3Draft3.jpg" alt="Bild från draften">
+     <br>
+      <img src="3Draft4.jpg" alt="Bild från draften">
+     <br>
+      <img src="3draft5.jpg" alt="Bild från draften">
+     <br>
+      <img src="3Draft7.jpg" alt="Bild från draften">
+     <br>
+      <img src="3draft8.jpg" alt="Bild från draften">
+     
+
+     </div>
+    </div>
+    </div>
+     
+        
+                 
+               
+     <!--Allt som innefattar bakgrunden till article, all text, bilder, etc-->
+		
+        
+  
+</body>
+</html>
