@@ -1836,8 +1836,7 @@ video {
 @media screen and (max-width:1400px){
 	.contant{margin-left:15%}
 	.Background1{margin-left:15%}
-	#table{margin-left:15%;}
-	.caption{margin-left:15%;}
+	
 	#clicker:checked ~ .menu2 .menu-list ul li a{
 		font-size:13px;
 	}
@@ -2307,6 +2306,3 @@ Mobilanpassning för Player Of The Month
 	
 	
 }
-
-
-		 /* En jävla massor kod */
