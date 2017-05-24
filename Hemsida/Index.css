@@ -7,6 +7,7 @@ body{
 	margin:0;
 	background-image:url(patriotsbackground.jpg);
 	background-color: #D6D6D6;
+	cursor:progress;
 
 	
 
@@ -1838,6 +1839,12 @@ video {
 	.menu3{display:none;}
 	
 }
+
+@media screen and (max-width:1400px){
+	.contant{margin-left:35%}
+	.Background1{margin-left:35%}
+}
+	
 
 @media screen and (max-width:850px){
 	.menu1{margin-top:-27%;}
