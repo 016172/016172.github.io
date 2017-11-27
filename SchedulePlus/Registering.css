@@ -1,0 +1,310 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	height:150%;
+	width:100%;
+	margin:0;
+	padding:0;
+
+	
+}
+
+#Storbox{
+	width:100%;
+	height:100%;
+	background-image:url(Registering.jpg);
+	background-size:100% 100%;
+	position:absolute;
+
+}
+
+
+/*Desktop navigation*/
+
+@media screen and (min-width: 610px) {
+  .mobile {
+    display: none;
+  }
+  header {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    position: fixed;
+    -webkit-transition: all .5s;
+    transition: all .5s ease;
+    z-index: 999;
+  }
+  header #logo {
+    float: left;
+    margin-left: 5%;
+    font-family: 'Open Sans';
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 300;
+    font-size: 30px;
+    color: #fdad59;
+  }
+  header nav {
+    float: right;
+    margin-right: 5%;
+  }
+  header nav a {
+    position: relative;
+    color: #a3a3a3;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Lato', serif, sans-serif;
+    text-decoration: none;
+    margin-left: 50px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    transition: color .25s ease;
+  }
+ 
+ 
+}
+
+
+/*----------------------------------------------*/
+
+
+/*Mobile*/
+
+@media screen and (max-width: 609px) {
+  .desktop {
+    display: none;
+  }
+  @import url(https://fonts.googleapis.com/css?family=Vollkorn|Roboto);
+  @import url(https://fonts.googleapis.com/css?family=Quicksand);
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    width: 100%;
+    position: fixed;
+    height: 70px;
+    line-height: 70px;
+    -webkit-transition: all .5s;
+    transition: all .5s ease;
+    z-index: 999;
+  }
+  header.resize {
+    height: 50px;
+    line-height: 50px;
+    background: rgb(31, 32, 39);
+    border-bottom: 1px solid rgb(46, 48, 56);
+  }
+  header.resize .button_container {
+    top: 14px;
+  }
+  header.resize #logo {
+    font-size: 20px;
+  }
+  #logo {
+    float: left;
+    margin-left: 20px;
+    font-family: 'Open Sans';
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 300;
+    font-size: 24px;
+    color: #fdad59;
+  }
+  .button_container {
+    position: fixed;
+    width: 30px;
+    height: 25px;
+    z-index: 100;
+    right: 20px;
+    top: 25px;
+    cursor: pointer;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+  }
+  .button_container span {
+    width: 30px;
+    height: 1px;
+    position: absolute;
+    background: #fdad59;
+    transition: all .35s ease;
+  }
+  .top {
+    top: 0px;
+  }
+  .middle {
+    top: 10px;
+  }
+  .bottom {
+    top: 20px;
+  }
+  .button_container.active .top {
+    -webkit-transform: translateY(10px) translateX(0) rotate(45deg);
+    transform: translateY(10px) translateX(0) rotate(45deg);
+  }
+  .button_container.active .middle {
+    opacity: 0;
+  }
+  .button_container.active .bottom {
+    -webkit-transform: translateY(-10px) translateX(0) rotate(-45deg);
+    transform: translateY(-10px) translateX(0) rotate(-45deg);
+  }
+  .overlay {
+    position: fixed;
+    background: rgba(26, 27, 34, 1);
+    visibility: hidden;
+    width: 100%;
+    height: 0%;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    -webkit-transition: opacity .35s, height .35s, visibility .35s;
+    transition: opacity .35s, height .35s, visibility .35s;
+    z-index: 1;
+  }
+  .overlay.open {
+    height: 100%;
+    opacity: .98;
+    visibility: visible;
+  }
+  .overlay.open li {
+    -webkit-animation: fadeInTop .5s ease forwards;
+    animation: fadeInTop .5s ease forwards;
+    -webkit-animation-delay: .35s;
+    animation-delay: .35s;
+  }
+  .overlay.open li:nth-of-type(2) {
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s;
+  }
+  .overlay.open li:nth-of-type(3) {
+    -webkit-animation-delay: .45s;
+    animation-delay: .45s;
+  }
+  .overlay.open li:nth-of-type(4) {
+    -webkit-animation-delay: .50s;
+    animation-delay: .50s;
+  }
+  .overlay nav {
+    position: relative;
+    height: 70%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 40px;
+    font-family: 'Lato', serif;
+    font-weight: lighter;
+    letter-spacing: 10px;
+    text-align: center;
+  }
+  .overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+  }
+  .overlay ul li {
+    display: block;
+    height: 25%;
+    height: calc(100% / 4);
+    min-height: 50px;
+    position: relative;
+    opacity: 0;
+  }
+  .overlay ul li a {
+    display: block;
+    position: relative;
+    color: #FFF;
+    text-decoration: none;
+    overflow: hidden;
+  }
+  .overlay ul li a:hover:after,
+  .overlay ul li a:focus:after,
+  .overlay ul li a:active:after {
+    width: 100%;
+  }
+  .overlay ul li a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 1px;
+    background: #FFF;
+    -webkit-transition: .35s;
+    transition: .35s;
+  }
+  @-webkit-keyframes fadeInTop {
+    0% {
+      opacity: 0;
+      bottom: 20%;
+    }
+    100% {
+      opacity: 1;
+      bottom: 0;
+    }
+  }
+  @keyframes fadeInTop {
+    0% {
+      opacity: 0;
+      bottom: 20%;
+    }
+    100% {
+      opacity: 1;
+      bottom: 0;
+    }
+  }
+  body {
+    height: 3000px;
+  }
+  
+}
+
+/*
+http://www.freshdesignweb.com/beautiful-registration-form-with-html5-and-css3.html
+*/
+
+.form{
+	background:#f1f1f1; width:470px; margin:0 auto; padding-left:50px; padding-top:20px;
+	  margin-top:15%;
+}
+.form fieldset{border:0px; padding:0px; margin:0px;}
+.form p.contact { font-size: 12px; margin:0px 0px 10px 0;line-height: 14px; font-family:Arial, Helvetica;}
+
+.form input[type="text"] { width: 400px; }
+.form input[type="email"] { width: 400px; }
+.form input[type="password"] { width: 400px; }
+.form input.birthday{width:60px;}
+.form input.birthyear{width:120px;}
+.form label { color: #000; font-weight:bold;font-size: 12px;font-family:Arial, Helvetica; }
+.form label.month {width: 135px;}
+.form input, textarea { background-color: rgba(255, 255, 255, 0.4); border: 1px solid rgba(122, 192, 0, 0.15); padding: 7px; font-family: Keffeesatz, Arial; color: #4b4b4b; font-size: 14px; -webkit-border-radius: 5px; margin-bottom: 15px; margin-top: -10px; }
+.form input:focus, textarea:focus { border: 1px solid #ff5400; background-color: rgba(255, 255, 255, 1); }
+.form .select-style {
+  -webkit-appearance: button;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -webkit-user-select: none;
+  background-image: url(images/select-arrow.png), 
+    -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 0px solid #FFF;
+  color: #555;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;}
+.form .gender {
+  width:410px;
+  }
+.form input.buttom{ background: #4b8df9; display: inline-block; padding: 5px 10px 6px; color: #fbf7f7; text-decoration: none; font-weight: bold; line-height: 1; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; text-shadow: 0 -1px 1px #222; border: none; position: relative; cursor: pointer; font-size: 14px; font-family:Verdana, Geneva, sans-serif;}
+.form input.buttom:hover	{ background-color: #2a78f6; }
