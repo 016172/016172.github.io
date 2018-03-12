@@ -1,0 +1,357 @@
+<!doctype html>
+<!-- saved from url=(0014)about:internet -->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<!--<![endif]-->
+
+<head>
+ 
+  <link rel="stylesheet" href="index.css" />
+ 
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/jquery-2.2.3.min.js"></script>
+</head>
+
+
+<body>
+  <!--Preloader-->
+  <div class="loading">
+    <div class="svg-wrapper">
+      <svg height="150" width="150" xmlns="http://www.w3.org/2000/svg">
+      <rect class="animate" height="150" width="150" />
+    </svg>
+      <div class="text">
+        <span class="logo">Schedule+</span>
+        <span class="motto">Scheduling ascended to perfection</span>
+      </div>
+    </div>
+  </div>
+
+  <!--SVG animation-->
+  <script>
+    var p = document.querySelector('.animate'),
+      offset = 600;
+    var offsetMe = function() {
+      if (offset < 0) {
+        offset = 600;
+      }
+      p.style.strokeDashoffset = offset;
+      offset = offset - 5;
+      requestAnimationFrame(offsetMe);
+    }
+    offsetMe();
+  </script>
+
+  <!--Desktop Navigation-->
+  <span class="desktop">
+    <header>
+      <span id="logo">Schedule+</span>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Inspiration</a>
+        <a href="registerNlogin.html">Registration & Login</a>
+        <a href="#">Support</a>
+      </nav>
+    </header>
+  </span>
+
+  <!--Mobile Navigation-->
+  <span class="mobile">
+    <header>
+      <span id="logo">Bji</span>
+      <div class="button_container">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </div>
+    </header>
+
+    <div class="overlay">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Calendar</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">SMC</a></li>
+        </ul>
+      </nav>
+    </div>
+  </span>
+  
+  <!--Homepage-->
+  <div class="wrapper">
+  
+  
+    <div class="landing"></div>
+    
+ <div class="content-1">
+    <span class="one">Schedule+</span>
+    <span class="two">Shcedule ascended</span>
+    <span class="three">Download today!</span>
+    
+  </div>
+  
+ 
+  </div>
+  
+
+  <!--About section-->
+  <div class="about">
+    
+    <div id="box"></div>
+    
+    <script>
+	var sentences = new Array ('Welcome to Schedule+!','This project analysed the potentional of a digital schedule', 'Below is useful information to be found');
+
+var timer = 7000;
+
+$(document).ready(function(){
+
+    var total = sentences.length - 1;
+
+    for (var i = 0; i <= total; i++) {
+
+        $('#box').append('<p class="sl" id="textBox'+i+'"></p>');
+         
+        var max = sentences[i].length - 1;
+
+        for (var j = 0; j <= max; j++) {
+            $('#textBox'+i).append('<span2 style="transition: ' + Math.random()*3 + 's; transition-delay: ' + Math.random() + 's;">' + sentences[i].charAt(j) + '</span2>'); 
+        };
+
+    }; 
+
+    var maxBox = $('#box > p').length;
+    var r = 0;
+
+    $('#textBox' + r).addClass('active');
+
+    setInterval(function(){ 
+
+        $('#textBox' + r).removeClass('active');
+
+        r++;
+
+        if (r == maxBox) {
+            r = 0;
+        }
+   
+        setTimeout(function(){ 
+            $('#textBox' + r).addClass('active');
+        }, 2000);
+
+    }, timer);
+
+}); 
+</script>
+    
+    </div>
+    
+   <div class='title'>
+  <h1>
+    General statistics for Schedule+
+  </h1>
+  <h2>
+    Scanned and updated every 6th hour
+  </h2>
+</div>
+<div class='ui'>
+  <div class='ui_box'>
+    <div class='ui_box__inner'>
+      <h2>
+        Satisfaction rate among users
+      </h2>
+<p>Random text</p>
+      <div class='stat'>
+        <span>97%</span>
+      </div>
+      <div class='progress'>
+        <div class='progress_bar'></div>
+      </div>
+      <p>Lorem ipsum dolor sit amet. Some more super groovy information about this stat.</p>
+    </div>
+    <div class='drop'>
+      <p>Take a closer look</p>
+      <div class='arrow'></div>
+    </div>
+  </div>
+  <div class='ui_box'>
+    <div class='ui_box__inner'>
+      <h2>
+        Registration by month
+      </h2>
+      <p>Brief overview</p>
+      <div class='stat_left'>
+        <ul>
+          <li>
+           January
+          </li>
+          <li>
+            Februrary
+          </li>
+          <li>
+            March
+          </li>
+          <li>
+            May
+          </li>
+        </ul>
+      </div>
+      <div class='progress_graph'>
+        <div class='progress_graph__bar--1'></div>
+        <div class='progress_graph__bar--2'></div>
+        <div class='progress_graph__bar--3'></div>
+        <div class='progress_graph__bar--4'></div>
+      </div>
+      <p>Lorem ipsum dolor sit amet. Some more super groovy information.</p>
+    </div>
+    <div class='drop'>
+      <p>Take a closer look</p>
+      <div class='arrow'></div>
+    </div>
+  </div>
+  <div class='ui_box'>
+    <div class='ui_box__inner'>
+      <h2>
+       SQL-server uptime
+      </h2>
+      <p>Updated every 5 minutes</p>
+      <div class='stat'>
+        <span>99.2%</span>
+      </div>
+      <div class='progress'>
+        <div class='progress_bar--two'></div>
+      </div>
+      <p>Lorem ipsum dolor sit amet. Some more super groovy information about this stat.</p>
+    </div>
+    <div class='drop'>
+      <p>Take a closer look</p>
+      <div class='arrow'></div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="wrapper1">
+ 
+  </div>
+</div>
+<div class="description">
+  <div class="inner">
+    <h2>About</h2>
+    <p>This pen contains the styles needed for an animation which can be used to toggle (for example) a persons description on a personal website or profile.</p>
+    <p>It would be cool to have this animation play on a scroll event. Or perhaps on click of a specific button. It is currently controlled by a click event on $(document).</p>
+    <p>The animation is controlled by adding a .collapsed class to the .header element. </p>
+    <p>Feel free to use this in your project. Try come up with the most creative way to toggle the animation!</p>
+    <hr/>
+    <p>If the main box looks a bit off, "it's too wide for the screen" your screen is too narrow to contain a 600px wide box.</p>
+    <p>My advise would be to either resize the editor window (make it a bit bigger) or to just not use codepen on your phone 😉</p>
+  </div>
+</div>
+
+
+  
+  <script>
+  
+  //scroll to top on refresh//
+window.onbeforeunload = function() {
+  window.scrollTo(0, 0);
+}
+
+jQuery(document).ready(function($) {
+
+  $(window).load(function() {
+    $('.loading').delay(2000).fadeOut('slow', function() {
+      $(this).remove();
+    });
+    setTimeout(function() {
+      $('.landing').addClass('loaded');
+    }, 2000);
+    setTimeout(function() {
+      $('body').addClass('loaded');
+    }, 2000);
+
+  });
+
+  window.addEventListener('load', function() {
+
+    var one = document.querySelector('.one');
+    var two = document.querySelector('.two');
+    var three = document.querySelector('.three');
+    delay = 2500;
+
+    setTimeout(function() {
+      $('.content-1').addClass('loaded');
+    }, 2000);
+
+    var animation = function() {
+      setTimeout(function() {
+        one.style.top = '50%';
+      }, delay);
+      setTimeout(function() {
+        one.style.top = '100%';
+      }, delay * 5);
+
+      setTimeout(function() {
+        two.style.top = '50%';
+      }, delay * 6);
+      setTimeout(function() {
+        two.style.top = '100%';
+      }, delay * 11);
+
+      setTimeout(function() {
+        three.style.top = '50%';
+      }, delay * 12);
+      setTimeout(function() {
+        three.style.top = '100%';
+      }, delay * 17);
+    };
+    animation();
+    setInterval(animation, delay * 18);
+  });
+
+  window.onscroll = function() {
+    if ($(this).scrollTop() > 1) {
+      $('header').addClass("resize");
+    } else {
+      $('header').removeClass("resize");
+    }
+  };
+
+  $(window).scroll(function() {
+    $('.hideme').each(function(i) {
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      if (bottom_of_window > bottom_of_object) {
+        $(this).animate({
+          'opacity': '1'
+        }, 1250);
+      }
+    });
+  });
+
+  $(".mouseScroll").click(function() {
+    $('html, body').animate({
+      scrollTop: $(".about").offset().top - 150
+    }, 800);
+  });
+
+  window.onload = function() {
+    $('.button_container').click(function() {
+      $('.button_container').toggleClass('active');
+      $('.overlay').toggleClass('open');
+      $('body').toggleClass('active');
+    });
+  }
+
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<!doctype html>
+<!-- saved from url=(0014)about:internet -->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<!--<![endif]-->
+
+<head>
+ 
+  <link rel="stylesheet" href="registerNlogin.css" />
+ 
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/jquery-2.2.3.min.js"></script>
+</head>
+
+
+<body>
+  <!--Preloader-->
+  <div class="loading">
+    <div class="svg-wrapper">
+      <svg height="150" width="150" xmlns="http://www.w3.org/2000/svg">
+      <rect class="animate" height="150" width="150" />
+    </svg>
+      <div class="text">
+        <span class="logo">Schedule+</span>
+        <span class="motto">Scheduling ascended to perfection</span>
+      </div>
+    </div>
+  </div>
+
+  <!--SVG animation-->
+  <script>
+    var p = document.querySelector('.animate'),
+      offset = 600;
+    var offsetMe = function() {
+      if (offset < 0) {
+        offset = 600;
+      }
+      p.style.strokeDashoffset = offset;
+      offset = offset - 5;
+      requestAnimationFrame(offsetMe);
+    }
+    offsetMe();
+  </script>
+
+  <!--Desktop Navigation-->
+  <span class="desktop">
+    <header>
+      <span id="logo">Schedule+</span>
+      <nav>
+          <a href="index.html">Home</a>
+        <a href="#">Inspiration</a>
+        <a href="registerNlogin.html">Registration & Login</a>
+        <a href="#">Support</a>
+      </nav>
+    </header>
+  </span>
+
+  <!--Mobile Navigation-->
+  <span class="mobile">
+    <header>
+      <span id="logo">Bji</span>
+      <div class="button_container">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </div>
+    </header>
+
+    <div class="overlay">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Calendar</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">SMC</a></li>
+        </ul>
+      </nav>
+    </div>
+  </span>
+  
+  <!--Homepage-->
+  <div class="wrapper">
+  
+  
+    <div class="landing"></div>
+    
+ <div class="content-1">
+    <span class="one">Schedule+</span>
+    <span class="two">Registration/Login</span>
+    <span class="three">Join now!</span>
+    
+  </div>
+  
+ 
+
+  
+  </div>
+  
+     <div class="register">
+    
+     <div id="page-wrapper">
+      <div id="modal-wrapper">
+        <div id="modal">
+          <div id="cards">
+            <div class="card" id="login">
+              <div class="box">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="84px" height="70px" viewBox="0 0 600 332" enable-background="new 0 0 600 332" xml:space="preserve">
+                  <path id="SVGID_1_" d="M48.207,322.346H2.201l195.546-296.91l29.083,24.881L48.207,322.346L48.207,322.346z M366.916,323.3L184.581,45.545l22.235-34.362l182.337,277.754L366.916,323.3L366.916,323.3z M206.816,322.346c0,0-32.511-50.283-67.621-102.999c-7.233-10.859-14.576-21.821-21.768-32.47c-0.586-0.867,14.985-46.926,21.658-36.678c7.217,11.086,14.388,22.232,21.347,33.138c36.734,57.58,67.509,108.465,67.509,108.465L206.816,322.346L206.816,322.346z M313.043,162.238l-39.053,59.399c-31.744,48.284-57.467,87.41-57.467,87.41l-31.942-22.019c0,0,29.998-44.644,67.215-101.253c5.132-7.806,10.351-15.742,15.577-23.694c4.91-7.47,9.831-14.953,14.699-22.356C321.356,79.969,366.42,11.184,366.42,11.184h45.049C411.469,11.184,353.769,100.292,313.043,162.238L313.043,162.238z M375.986,309.048l-29.083-24.882L526.486,11.184h45.046L375.986,309.048L375.986,309.048z"></path>
+                </svg>
+              </div>
+              <form id="login-form">
+                <label>Email
+                  <a href="#" title="Forgot email?" class="tip">Forgot email?</a>
+                </label>
+                <input type="text" id="login-email" class="textbox">
+                <label>Password
+                  <a href="#" title="Forgot password?" class="tip">Forgot password?</a>
+                </label>
+                <input type="password" id="login-password" class="textbox">
+              </form>
+              <button type="submit" class="proceed">Log-in to your account <i class="ion-ios-arrow-thin-right"></i></button>
+            </div>
+            <div class="card" id="register">
+              <div class="box">
+              <div id="branding-small">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="42px" height="35px" viewBox="0 0 600 332" enable-background="new 0 0 600 332" xml:space="preserve">
+                  <path id="SVGID_1_" d="M48.207,322.346H2.201l195.546-296.91l29.083,24.881L48.207,322.346L48.207,322.346z M366.916,323.3L184.581,45.545l22.235-34.362l182.337,277.754L366.916,323.3L366.916,323.3z M206.816,322.346c0,0-32.511-50.283-67.621-102.999c-7.233-10.859-14.576-21.821-21.768-32.47c-0.586-0.867,14.985-46.926,21.658-36.678c7.217,11.086,14.388,22.232,21.347,33.138c36.734,57.58,67.509,108.465,67.509,108.465L206.816,322.346L206.816,322.346z M313.043,162.238l-39.053,59.399c-31.744,48.284-57.467,87.41-57.467,87.41l-31.942-22.019c0,0,29.998-44.644,67.215-101.253c5.132-7.806,10.351-15.742,15.577-23.694c4.91-7.47,9.831-14.953,14.699-22.356C321.356,79.969,366.42,11.184,366.42,11.184h45.049C411.469,11.184,353.769,100.292,313.043,162.238L313.043,162.238z M375.986,309.048l-29.083-24.882L526.486,11.184h45.046L375.986,309.048L375.986,309.048z"></path>
+                </svg>
+              </div>
+                <div class="box-header">Register</div>
+                <form id="register-form">
+                  <label>Email</label>
+                  <input type="text" id="register-email" class="textbox">
+                  <label>Password</label>
+                  <input type="password" id="register-password" class="textbox">
+                  <label>Confirm Password</label>
+                  <input type="password" id="register-password-conf" class="textbox">
+                </form>
+              </div>
+              <button type="submit" class="proceed">Create an account <i class="ion-ios-arrow-thin-right"></i></button>
+            </div>
+          </div>
+          <div id="toggle-tabs">
+            <div class="tab" id="toggle-login">Sign In</div>
+            <div class="tab" id="toggle-register">Register</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+	var login = $('#login');
+var register = $('#register');
+var button_login = $('#toggle-login');
+var button_register = $('#toggle-register');
+var box = $('.box');
+
+$(function() {
+
+  register.hide();
+
+  button_register.click(function() {
+    login.slideUp(1000);
+    register.slideDown(1000);
+  });
+  button_login.click(function() {
+    register.slideUp(1000);
+    login.slideDown(1000);
+  });
+});
+
+</script>
+     
+
+  </div>
+  
+  
+
+
+
+
+  <!--About section-->
+  <div class="about">
+
+
+    
+    
+    </div>
+
+
+
+
+
+  
+  <script>
+  
+  //scroll to top on refresh//
+window.onbeforeunload = function() {
+  window.scrollTo(0, 0);
+}
+
+jQuery(document).ready(function($) {
+
+  $(window).load(function() {
+    $('.loading').delay(2000).fadeOut('slow', function() {
+      $(this).remove();
+    });
+    setTimeout(function() {
+      $('.landing').addClass('loaded');
+    }, 2000);
+    setTimeout(function() {
+      $('body').addClass('loaded');
+    }, 2000);
+
+  });
+
+  window.addEventListener('load', function() {
+
+    var one = document.querySelector('.one');
+    var two = document.querySelector('.two');
+    var three = document.querySelector('.three');
+    delay = 2500;
+
+    setTimeout(function() {
+      $('.content-1').addClass('loaded');
+    }, 2000);
+
+    var animation = function() {
+      setTimeout(function() {
+        one.style.top = '50%';
+      }, delay);
+      setTimeout(function() {
+        one.style.top = '100%';
+      }, delay * 5);
+
+      setTimeout(function() {
+        two.style.top = '50%';
+      }, delay * 6);
+      setTimeout(function() {
+        two.style.top = '100%';
+      }, delay * 11);
+
+      setTimeout(function() {
+        three.style.top = '50%';
+      }, delay * 12);
+      setTimeout(function() {
+        three.style.top = '100%';
+      }, delay * 17);
+    };
+    animation();
+    setInterval(animation, delay * 18);
+  });
+
+  window.onscroll = function() {
+    if ($(this).scrollTop() > 1) {
+      $('header').addClass("resize");
+    } else {
+      $('header').removeClass("resize");
+    }
+  };
+
+  $(window).scroll(function() {
+    $('.hideme').each(function(i) {
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      if (bottom_of_window > bottom_of_object) {
+        $(this).animate({
+          'opacity': '1'
+        }, 1250);
+      }
+    });
+  });
+
+  $(".mouseScroll").click(function() {
+    $('html, body').animate({
+      scrollTop: $(".about").offset().top - 150
+    }, 800);
+  });
+
+  window.onload = function() {
+    $('.button_container').click(function() {
+      $('.button_container').toggleClass('active');
+      $('.overlay').toggleClass('open');
+      $('body').toggleClass('active');
+    });
+  }
+
+});
+
+</script>
+
+</body>
+
+</html>
