@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+
+
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+<link href="index1.css" rel="stylesheet" type="text/css">
+<meta charset="utf-8">
+<title>CryptoMarket || PUMP & DUMP</title>
+</head>
+
+<h1>C.A Crypto</h1>
+<a href="https://016172.github.io/MneEoxSEwcvC/graph.html#DASH/BTC:1y">Market</a>
+
+<ul id="countdown"></ul>
+
+
+<script>
+
+
+(function countdown(){   
+   
+   var launch_date = new Date (Date.parse("Jul 24, 2018 23:00:00 GMT +1"));
+   var now = new Date();
+   var days; var hours; var minutes; var seconds; var rest;
+	
+   seconds = rest = Math.floor(((launch_date.getTime() - now.getTime()) / 1000));
+
+   days = zero (Math.floor(seconds / 86400));
+   seconds -= days * 86400;
+			
+   hours = zero (Math.floor(seconds / 3600));
+   seconds -= hours * 3600;
+
+   minutes = zero (Math.floor(seconds / 60));
+   seconds -= minutes * 60;
+
+   seconds = zero (Math.floor(seconds));
+    
+   function zero(n){
+      return (n < 10 ? '0' : false) + n;  
+   }
+  
+   rest <= 0 ? days = hours = minutes = seconds = '00' : setTimeout(countdown, 1000);
+     
+   document.getElementById('countdown').innerHTML =
+      '<li><div><span>' + days +'</span>day' + (days > 1 ? 's' : '') +'</div></li>'
+      +'<li><div><span>' + hours +'</span>hour' + (hours > 1 ? 's' : '') +'</div></li>'
+      +'<li><div><span>' + minutes +'</span>minute' + (minutes > 1 ? 's' : '') +'</div></li>'
+      +'<li><div><span>' + seconds +'</span>second' + (seconds > 1 ? 's' : '') +'</div></li>';
+})();
+
+</script>
+
+</body>
+</html>
