@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+   font-family: Helvetica, sans-serif;
+   background-image:url(andy%20lobster.jpg);
+   background-size:100%;
+}
+
+#countdown {
+   width: 462px;
+   position: absolute;
+   left: 25%;
+   top: 50%;
+   transform: translate(-50%, -50%) rotate(-45deg);
+   padding: 0;
+   list-style: none;
+}
+
+#countdown li {
+   display: table;
+   text-align: center;
+   float: left;
+   background: #fff;
+   margin: 2px;
+   width: 150px;
+   height: 150px;
+}
+
+#countdown li:nth-child(3) {
+   clear: left;
+   margin-left: 156px;
+}
+
+#countdown li div {
+   transform: rotate(45deg);
+   display: table-cell;
+   vertical-align: middle;
+}
+
+#countdown li div span {
+   display: block;
+   font-size: 3rem;
+   color: #323031;
+}
+h1{
+color:#36C;
+	margin-left:17%;
+	margin-top:12%;
+	font-size:55px;
+}
