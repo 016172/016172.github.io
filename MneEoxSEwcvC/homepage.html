@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+
+
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+<link href="homepage.css" rel="stylesheet" type="text/css">
+<meta charset="utf-8">
+<title>CryptoMarket || PUMP & DUMP</title>
+</head>
+
+<body>
+
+
+<div id="wrapper1">
+
+<div id="Currencybox">
+
+<div class="example1">
+	<h3>
+		<script type="text/javascript">
+        baseUrl = "https://widgets.cryptocompare.com/";
+        var scripts = document.getElementsByTagName("script");
+        var embedder = scripts[ scripts.length - 1 ];
+        var cccTheme = {"General":{}};
+        (function (){
+        var appName = encodeURIComponent(window.location.hostname);
+        if(appName==""){appName="local";}
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        var theUrl = baseUrl+'serve/v3/coin/header?fsyms=BTC,ETH,XRP,BCH,EOS,LTC&tsyms=USD';
+        s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+        embedder.parentNode.appendChild(s);
+        })();
+        </script>
+
+	</h3>
+</div>
+
+</div>
+
+<div id="header1">
+<!-- HTML -->	
+<div class="example2">
+<h3>Next pump & dump is scheduled for: 9:00 PM (GMT). Join our discord: https://discord.gg/fGZsNDU </h3>
+</div>
+</div>
+
+<div id="chatBox">
+<iframe src="https://titanembeds.com/embed/455004149763932182" height="100%" width="100%" frameborder="0"></iframe>
+</div>
+
+<div id="infoBox"> 
+
+
+<div id="clock">
+
+<ul id="countdown"></ul>
+
+
+<script>
+
+
+(function countdown(){   
+   
+   var launch_date = new Date (Date.parse("Jul 24, 2018 23:00:00 GMT +1"));
+   var now = new Date();
+   var days; var hours; var minutes; var seconds; var rest;
+	
+   seconds = rest = Math.floor(((launch_date.getTime() - now.getTime()) / 1000));
+
+   days = zero (Math.floor(seconds / 86400));
+   seconds -= days * 86400;
+			
+   hours = zero (Math.floor(seconds / 3600));
+   seconds -= hours * 3600;
+
+   minutes = zero (Math.floor(seconds / 60));
+   seconds -= minutes * 60;
+
+   seconds = zero (Math.floor(seconds));
+    
+   function zero(n){
+      return (n < 10 ? '0' : false) + n;  
+   }
+  
+   rest <= 0 ? days = hours = minutes = seconds = '00' : setTimeout(countdown, 1000);
+     
+   document.getElementById('countdown').innerHTML =
+      '<li><div><span>' + days +'</span>day' + (days > 1 ? 's' : '') +'</div></li>'
+      +'<li><div><span>' + hours +'</span>hour' + (hours > 1 ? 's' : '') +'</div></li>'
+      +'<li><div><span>' + minutes +'</span>minute' + (minutes > 1 ? 's' : '') +'</div></li>'
+      +'<li><div><span>' + seconds +'</span>second' + (seconds > 1 ? 's' : '') +'</div></li>';
+})();
+
+</script>
+
+</div>
+	<div class="wrapper">
+ 		 <div class="content">
+    		 <div id="text1"> <h1>PTX</h1>
+
+  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora doloremque facere quis, molestias dicta! Quidem ullam, dolore assumenda, iste laborum debitis inventore sequi magnam eos tempore recusandae laudantium dignissimos voluptates.Perferendis illo eius provident rem consequatur, sequi eos nulla sit nihil alias sapiente, dolorum natus laboriosam harum consectetur maxime facilis, ipsam commodi. Hover over me to reveal the rest.</p>
+  			</div>
+ 		 </div>
+	</div>
+</div>
+
+
+</div>
+
+
+<div id="wrapper10">
+
+	<div id="chartPTX">
+    
+   
+	</div>
+</div>
+</body>
+</html>
