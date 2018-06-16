@@ -1,0 +1,247 @@
+@charset "utf-8";
+*{margin:0; padding:0;}  
+html,body{
+	width:100%;
+	height:100%; 
+	margin:0px;
+	padding:0px;
+	background-image:url(4k.jpg);
+	
+  
+	
+} 
+#wrapper1{
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+	background-image:url(https://unsplash.it/1800/800?image=893);
+	
+   image-rendering: -webkit-optimize-contrast;
+   
+	
+}
+
+
+
+#counterCLOCK{
+	width:5%;
+	height:10%;
+	float:left;
+		background-color:#09F;
+		z-index:999;
+	position: absolute;
+	
+}
+#Currencybox
+{
+	
+	width:100%;
+	 position:fixed;
+	overflow:hidden;
+	padding:0;
+	border:solid;
+	border-color:#000;
+	height:4%;
+	background-color:#FFF;
+	 -moz-box-sizing: border-box; 
+     -webkit-box-sizing: border-box; 
+      box-sizing: border-box;
+	  font-size:26px;
+	  text-align:center;
+	  bottom:0;
+	  z-index:1;
+	 
+
+}
+
+#header1
+{
+	
+	width:100%;
+	overflow:hidden;
+	padding:0;
+	border:solid;
+	border-color:#000;
+	height:4%;
+	background-color:#FFF;
+	 -moz-box-sizing: border-box; 
+     -webkit-box-sizing: border-box; 
+      box-sizing: border-box;
+	  font-size:26px;
+	  text-align:center;
+	
+
+}
+
+#chatBox{
+	width:16%;
+	text-align:left;
+	float:left;
+	overflow:hidden;
+	padding:0;
+	border:solid;
+	border-color:#000;
+	height:92%;
+	background-color:#FFF;
+	 -moz-box-sizing: border-box; 
+     -webkit-box-sizing: border-box; 
+      box-sizing: border-box;
+	  font-size:15px;
+	  
+	
+}
+#infoBox{
+	width:84%;
+	
+	overflow:hidden;
+	padding:0;
+	float:left;
+	border:solid;
+	border-color:#000;
+	height:92%;
+	text-align:center;
+	 -moz-box-sizing: border-box; 
+     -webkit-box-sizing: border-box; 
+      box-sizing: border-box;
+	  font-size:20px;
+	  
+	
+}
+.example1 {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+}
+.example1 h3 {
+ font-size: 25px;
+ color: limegreen;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%);
+ /* Apply animation to this element */	
+ -moz-animation: example1 15s linear infinite;
+ -webkit-animation: example1 15s linear infinite;
+ animation: example1 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes example1 {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes example1 {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes example1 {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%); 
+ }
+}
+
+p {
+  color: #fff;
+}
+@supports (mix-blend-mode: screen) {
+  p {
+    mix-blend-mode: screen;
+    position: relative;
+  }
+  @elseif ($direction == "right") {}
+  @elseif ($direction == "bottom") {}
+  p::after {
+    background: linear-gradient(0deg, transparent, #000 3rem) no-repeat top center/100% 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    transition: 0.5s ease-out;
+  }
+  p:hover::after {
+    background-size: 100% 0%;
+  }
+}
+
+/* Pen styling */
+.wrapper {
+  background-image:url(PTX.jpg);
+  background-size:cover;
+  display: flex;
+  align-items: center;
+  font: 18px/1.5 "Roboto", sans-serif;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}
+.wrapper::before {
+  background: #222;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.content {
+  color: #fff;
+  max-width: 600px;
+  margin-top:-50%;
+  text-align: center;
+  position: relative;
+}
+#text1{
+	text-align:center;
+	margin-top:22%;
+	width:100%;
+	height:25%;
+}
+#wrapper10{
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+		text-align: center;
+	background-image:url(andy%20lobster.jpg);
+	
+	
+ 
+}
+
+#chartPTX{
+	width:100%;
+	height:100%;
+
+	
+	
+	
+}
+.textCHART{
+	color:#0FC;
+	width:100%;
+	height:5%;
+	
+}
