@@ -84,7 +84,7 @@ html,body{
 	padding:0;
 	border:solid;
 	border-color:#000;
-	height:92%;
+	height:96%;
 	background-color:#FFF;
 	 -moz-box-sizing: border-box; 
      -webkit-box-sizing: border-box; 
@@ -95,7 +95,6 @@ html,body{
 }
 #infoBox{
 	width:84%;
-	
 	overflow:hidden;
 	padding:0;
 	float:left;
