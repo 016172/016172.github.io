@@ -11,31 +11,3 @@ html,body{
 	
 } 
 
-body .banner-wrapper {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-}
-body .banner {
-  position: absolute;
-  overflow: hidden;
-}
-body .banner.dev {
-  transform: skew(-30deg);
-  margin-left: -500px;
-  width: calc(50vw + 500px);
-}
-body .banner.dev .banner-content {
-  transform: skew(30deg);
-  margin-left: 500px;
-}
-body .banner .banner-content {
-  height: 400px;
-}
-body .banner img {
-  width: 100vw;
-}
-
-
-
