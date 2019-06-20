@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Andreas Olsson</title>
+<link rel="stylesheet" type="text/css" href="index.css">
+
+
+</head>
+
+
+<body>
+<canvas id="canvas"></canvas>
+<div class="container">
+  <time id="counter-1" datetime="2019-07-29" class="countdown">
+    <span class="days"><span>0</span><span>0</span></span>:
+    <span class="hours"><span>0</span><span>0</span></span>:
+    <span class="minutes"><span>0</span><span>0</span></span>:
+    <span class="seconds"><span>0</span><span>0</span></span>
+  </time>
+</div>
+
+<script>
+
+var canvas = document.getElementById("canvas"),
+    ctx = canvas.getContext("2d"),
+    width = canvas.width = window.innerWidth,
+    height = canvas.height = window.innerHeight,
+    grad = null,
+    gradStops = {
+        speed : 0.5,
+        colA: {
+            brightness: 255,
+            lighten: 0
+        },
+        colB: {
+            brightness: 255,
+            lighten: 0
+        }
+    },
+    cycle = 0;
+
+function colorCycle(cycle, bright, light) {
+    bright = bright || 255;
+    light = light || 0;
+    cycle *= .1;
+    var r = ~~ (Math.sin(.3 * cycle + 0) * bright + light),
+        g = ~~ (Math.sin(.3 * cycle + 2) * bright + light),
+        b = ~~ (Math.sin(.3 * cycle + 4) * bright + light);
+
+    return 'rgb(' + Math.min(r, 255) + ',' + Math.min(g, 255) + ',' + Math.min(b, 255) + ')';
+}
+
+
+function colorize() {
+    cycle += gradStops.speed;
+    grad = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+    grad.addColorStop(0, colorCycle(cycle, gradStops.colA.brightness, gradStops.colA.lighten));
+    grad.addColorStop(1, colorCycle(cycle + 60, gradStops.colB.brightness, gradStops.colB.lighten));
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    requestAnimationFrame(colorize);
+}
+
+setTimeout(function () {
+    width = canvas.width = window.innerWidth,
+    height = canvas.height = document.body.offsetHeight;
+    colorize();
+},100);
+
+window.onresize = function () {
+  height = canvas.height = document.body.offsetHeight;
+  width = canvas.width = document.body.offsetWidth;
+};
+
+var gui = new dat.GUI();
+gui.add(gradStops.colA, 'brightness', 1, 255);
+gui.add(gradStops.colA, 'lighten', 0, 255);
+gui.add(gradStops.colB, 'brightness', 1, 255);
+gui.add(gradStops.colB, 'lighten', 0, 255);
+gui.add(gradStops, "speed")
+
+</script>
+
+<script>
+
+let currentTime = new Date(Date.now());
+let goalTime = new Date(document.querySelector('#counter-1').getAttribute("datetime"));
+let countdownTime = goalTime.getTime() - currentTime.getTime();
+const countdown = document.querySelector('.countdown');
+const countdownDays = countdown.querySelector('.days');
+const countdownHours = countdown.querySelector('.hours');
+const countdownMinutes = countdown.querySelector('.minutes');
+const countdownSeconds = countdown.querySelector('.seconds');
+
+function formatTimeString(timeNumber){
+  let tempArray =  timeNumber.toString().split('');
+  
+  if(tempArray.length < 2) {
+    tempArray.unshift("0");
+  }
+  
+  return tempArray.map((item)=>{
+    return `<span>${item}</span>`;
+  }).join('');
+}
+
+function tick(){
+  countdownTime-=1000;
+  let newDay = formatTimeString(Math.floor(countdownTime / 86400000));
+  let newHour = formatTimeString(Math.floor((countdownTime % 86400000)/ 3600000));
+  let newMinute = formatTimeString(Math.floor(((countdownTime % 86400000) % 3600000) / 60000));
+  let newSecond = formatTimeString(Math.floor((((countdownTime % 86400000) % 3600000) % 60000) / 1000) );
+  
+  requestAnimationFrame(()=>{
+    countdownDays.innerHTML = newDay;
+    countdownHours.innerHTML = newHour;
+    countdownMinutes.innerHTML = newMinute;
+    countdownSeconds.innerHTML = newSecond;
+  });
+};
+
+setInterval(tick,1000);
+
+</script>
+</body>
+</html>
